@@ -14,5 +14,15 @@ Neighborhood.prototype.addCharacteristic = function(characteristic, value) {
   this.characteristics.push(char);
 };
 
+Neighborhood.prototype.addMap = function(url) {
+  this.map = url;
+};
+
+Neighborhood.prototype.addBlurb = function(blurb) {
+  this.blurb = blurb;
+};
+
 var ballard = new Neighborhood ('Ballard');
 ballard.addCharacteristic('nightLife', true);
+
+var capitolHill = new Neighborhood ('Capitol Hill');
