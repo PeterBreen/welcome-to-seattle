@@ -289,7 +289,7 @@ function processUserAnswers(event){
   sortResults();
   appendResultList();
 }
-
+//CREATE LINKS AFTER FORM RESULTS
 function appendResultList() {
   var formResults = document.getElementById('form-results');
   var formResultsUL = document.createElement('ul');
@@ -302,11 +302,8 @@ function appendResultList() {
   formResultsLI.appendChild(aTag);
 }
 
-var getUserAnswers = document.getElementById('help-me-choose-form');
-getUserAnswers.addEventListener('submit', processUserAnswers);
-
+//DISPLAY PAGE CONTENT FOR NEIGHBORHOOD.HTML
 function displayNeighborhood(neighborhood){
-
   var title = document.createElement('h1');
   title.textContent = neighborhood.name;
   document.getElementById('neighborhood-name').appendChild(title);
@@ -320,3 +317,7 @@ function displayNeighborhood(neighborhood){
   document.getElementById('info-box').appendChild(blurbContent);
 
 }
+
+//EVENT LISTENER FOR FORM PAGE
+var getUserAnswers = document.getElementById('help-me-choose-form');
+getUserAnswers.addEventListener('submit', processUserAnswers);
