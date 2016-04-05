@@ -166,5 +166,5 @@ function processUserAnswers(event){
   console.log('walkability question: ', event.target.walkabilityquestion.value);
 }
 
-var getUserAnswers = document.getElementById('form-section');
+var getUserAnswers = document.getElementById('help-me-choose-form');
 getUserAnswers.addEventListener('submit', processUserAnswers);
