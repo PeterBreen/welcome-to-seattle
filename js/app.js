@@ -293,7 +293,7 @@ function processUserAnswers(event){
 function appendResultList() {
   var formResults = document.getElementById('form-results');
   var resultsHeader = document.createElement('h2');
-  resultsHeader.textContent = 'Neighborhoods that best match your criteria';
+  resultsHeader.textContent = 'Sorted list of neighborhoods based on your needs:';
   formResults.appendChild(resultsHeader);
   var formResultsOL = document.createElement('ol');
   formResults.appendChild(formResultsOL);
