@@ -270,6 +270,16 @@ function processUserAnswers(event){
 
   assignNeighborhoodScores();
   sortResults();
+  appendResultList();
+}
+
+function appendResultList() {
+  var formResults = document.getElementById('form-results');
+  var formResultsUL = document.createElement('ul');
+  formResults.appendChild(formResultsUL);
+  var formResultsLI = document.createElement('li');
+  formResultsLI.textContent = neighborhoodArray[0].name;
+  formResultsUL.appendChild(formResultsLI);
 }
 
 var getUserAnswers = document.getElementById('help-me-choose-form');
