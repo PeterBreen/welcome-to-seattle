@@ -311,10 +311,14 @@ function getQueryVariable(variable)
   for (var i = 0; i < vars.length; i++) {
     var pair = vars[i].split('=');
     if(pair[0] == variable){
-      return pair[1];
+      displayNeighborhood(pair[1]);
     }
   }
   return(false);
+}
+var neighborhoodCheck = document.getElementById('neighborhood-name');
+if (neighborhoodCheck) {
+  getQueryVariable('id');
 }
 
 //DISPLAY PAGE CONTENT FOR NEIGHBORHOOD.HTML
