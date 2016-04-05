@@ -244,6 +244,17 @@ function destringify(string){
   return string;
 }
 
+function sortResults(){
+  neighborhoodArray.sort(function (a, b) {
+    if (a.score > b.score){
+      return -1;
+    }
+    if (b.score > a.score){
+      return 1;
+    } return 0;
+  });
+}
+
 function processUserAnswers(event){
   event.preventDefault();
   var nightLifeQuestion = event.target.nightlifequestion.value;
