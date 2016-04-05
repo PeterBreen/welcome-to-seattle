@@ -1,3 +1,5 @@
+var userInputArray = [];
+
 function Neighborhood (name) {
   this.name = name;
   this.characteristics = [];
@@ -150,20 +152,34 @@ rainier.addCharacteristic('singleFamily', true);
 rainier.addCharacteristic('rentApt', false);
 rainier.addCharacteristic('walkability', false);
 
+function createUserArray(characteristic, value){
+  var userChar = {
+    characteristic: characteristic,
+    value: value
+  };
+  userInputArray.push(userChar);
+}
+
 function processUserAnswers(event){
   event.preventDefault();
-  var nightLife = event.target.nightlifequestion.value;
+  var nightLifeQuestion = event.target.nightlifequestion.value;
   console.log('nightlife: ', event.target.nightlifequestion.value);
+  createUserArray('nightLife', nightLifeQuestion);
   var transitQuestion = event.target.transitquestion.value;
   console.log('transit: ', event.target.transitquestion.value);
+  createUserArray('transitAccess', transitQuestion);
   var parksQuestion = event.target.parksquestion.value;
   console.log('parks: ', event.target.parksquestion.value);
+  createUserArray('parks', parksQuestion);
   var singleFamilyHousingQuestion = event.target.singlefamilyhousingquestion.value;
   console.log('single family housing question: ', event.target.singlefamilyhousingquestion.value);
+  createUserArray('singleFamily', singleFamilyHousingQuestion);
   var rentableAptQuestion = event.target.rentableaptquestion.value;
   console.log('rentable apartment question: ', event.target.rentableaptquestion.value);
+  createUserArray('rentApt', rentableAptQuestion);
   var walkabilityQuestion = event.target.walkabilityquestion.value;
   console.log('walkability question: ', event.target.walkabilityquestion.value);
+  createUserArray('walkability', walkabilityQuestion);
 }
 
 var getUserAnswers = document.getElementById('help-me-choose-form');
