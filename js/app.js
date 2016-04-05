@@ -60,14 +60,6 @@ wedgwood.map = 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21489.24984
 wedgwood.blurb = 'Wedgwood has a Top Pot. And some houses. Well, that\'s it.';
 neighborhoodArray.push(wedgwood);
 
-// var wedgwood = new Neighborhood ('wedgwood');
-// wedgwood.addCharacteristic('nightLife', false);
-// wedgwood.addCharacteristic('transitAccess', false);
-// wedgwood.addCharacteristic('parks', true);
-// wedgwood.addCharacteristic('singleFamily', true);
-// wedgwood.addCharacteristic('rentApt', false);
-// wedgwood.addCharacteristic('walkability', false);
-
 var universityDistrict = new Neighborhood ('University District');
 universityDistrict.addCharacteristic('nightLife', true);
 universityDistrict.addCharacteristic('transitAccess', true);
