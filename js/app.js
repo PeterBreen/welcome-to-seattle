@@ -289,17 +289,22 @@ function processUserAnswers(event){
   sortResults();
   appendResultList();
 }
-//CREATE LINKS AFTER FORM RESULTS
+//CREATE RANKED LIST AFTER FORM RESULTS
 function appendResultList() {
   var formResults = document.getElementById('form-results');
-  var formResultsUL = document.createElement('ul');
-  formResults.appendChild(formResultsUL);
-  var formResultsLI = document.createElement('li');
-  formResultsUL.appendChild(formResultsLI);
-  var aTag = document.createElement('a');
-  aTag.setAttribute('href', 'neighborhood.html?id=' + neighborhoodArray[0].pageLink);
-  aTag.innerHTML = neighborhoodArray[0].name;
-  formResultsLI.appendChild(aTag);
+  var resultsHeader = document.createElement('h2');
+  resultsHeader.textContent = 'Neighborhoods that best match your criteria';
+  formResults.appendChild(resultsHeader);
+  var formResultsOL = document.createElement('ol');
+  formResults.appendChild(formResultsOL);
+  for (i = 0; i < neighborhoodArray.length; i++) {
+    var formResultsLI = document.createElement('li');
+    formResultsOL.appendChild(formResultsLI);
+    var aTag = document.createElement('a');
+    aTag.setAttribute('href', 'neighborhood.html?id=' + neighborhoodArray[i].pageLink);
+    aTag.innerHTML = neighborhoodArray[i].name;
+    formResultsLI.appendChild(aTag);
+  }
 }
 
 //QUERYSTRING STUFF
