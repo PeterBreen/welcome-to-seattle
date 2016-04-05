@@ -40,13 +40,13 @@ fremont.addCharacteristic('singleFamily', false);
 fremont.addCharacteristic('rentApt', true);
 fremont.addCharacteristic('walkability', true);
 
-var wedgewood = new Neighborhood ('Wedgewood');
-wedgewood.addCharacteristic('nightLife', false);
-wedgewood.addCharacteristic('transitAccess', false);
-wedgewood.addCharacteristic('parks', true);
-wedgewood.addCharacteristic('singleFamily', true);
-wedgewood.addCharacteristic('rentApt', false);
-wedgewood.addCharacteristic('walkability', false);
+var wedgwood = new Neighborhood ('wedgwood');
+wedgwood.addCharacteristic('nightLife', false);
+wedgwood.addCharacteristic('transitAccess', false);
+wedgwood.addCharacteristic('parks', true);
+wedgwood.addCharacteristic('singleFamily', true);
+wedgwood.addCharacteristic('rentApt', false);
+wedgwood.addCharacteristic('walkability', false);
 
 var universityDistrict = new Neighborhood ('University District');
 universityDistrict.addCharacteristic('nightLife', true);
