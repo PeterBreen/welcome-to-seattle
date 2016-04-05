@@ -13,7 +13,7 @@ body {
 }
 
 
-li {
+nav li {
   list-style-type: none;
   display: inline;
   padding-right: 10px;
