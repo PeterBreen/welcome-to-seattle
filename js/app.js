@@ -160,6 +160,22 @@ function createUserArray(characteristic, value){
   userInputArray.push(userChar);
 }
 
+function scoreAssignment(neighborhood){
+  for (var i = 0; i < userInputArray.length; i++){
+    if (destringify(userInputArray[i].value) === neighborhood.characteristics[i].value){
+      neighborhood.score++;
+    }
+  }
+}
+function destringify(string){
+  if(string === 'true'){
+    string = true;
+  }
+  else if(string === 'false'){
+    string = false;
+  }
+  return string;
+}
 function processUserAnswers(event){
   event.preventDefault();
   var nightLifeQuestion = event.target.nightlifequestion.value;
