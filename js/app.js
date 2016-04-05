@@ -222,6 +222,8 @@ function processUserAnswers(event){
   var walkabilityQuestion = event.target.walkabilityquestion.value;
   console.log('walkability question: ', event.target.walkabilityquestion.value);
   createUserArray('walkability', walkabilityQuestion);
+
+  assignNeighborhoodScores();
 }
 
 var getUserAnswers = document.getElementById('help-me-choose-form');
