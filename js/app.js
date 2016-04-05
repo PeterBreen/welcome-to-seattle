@@ -350,7 +350,29 @@ function displayNeighborhood(neighborhood){
   var blurbContent = document.createElement('section');
   blurbContent.textContent = neighborhood.blurb;
   document.getElementById('info-box').appendChild(blurbContent);
+}
 
+function displayPlaces() {
+  var places = document.getElementById('places-list');
+  var resultsHeader = document.createElement('h2');
+  resultsHeader.textContent = 'List of Neighborhoods';
+  places.appendChild(resultsHeader);
+  var formResultsOL = document.createElement('ol');
+  places.appendChild(formResultsOL);
+  for (i = 0; i < neighborhoodArray.length; i++) {
+    var formResultsLI = document.createElement('li');
+    formResultsOL.appendChild(formResultsLI);
+    var aTag = document.createElement('a');
+    aTag.setAttribute('href', 'neighborhood.html?id=' + neighborhoodArray[i].pageLink);
+    aTag.innerHTML = neighborhoodArray[i].name;
+    formResultsLI.appendChild(aTag);
+  };
+}
+
+//display page content for places.html - navigation backup page
+var placesCheck = document.getElementById('places-list');
+if (placesCheck) {
+  displayPlaces();
 }
 
 //EVENT LISTENER FOR FORM PAGE
