@@ -277,6 +277,7 @@ function processUserAnswers(event){
   createUserArray('walkability', walkabilityQuestion);
 
   assignNeighborhoodScores();
+  sortResults();
 }
 
 var getUserAnswers = document.getElementById('help-me-choose-form');
