@@ -1,0 +1,29 @@
+header {
+  display: block;
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  display: block;
+}
+
+
+li {
+  list-style-type: none;
+  display: inline;
+  padding-right: 10px;
+}
+
+.welcome-phrase {
+  align-content: center;
+  text-align: center;
+}
+
+.main-photo {
+  max-width: 960px;
+  height: auto;
+background-image: url(images/MainCitySeattlePhoto.jpeg);
+background-size: cover;
+background-position: center;
+}
