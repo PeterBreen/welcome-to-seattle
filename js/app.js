@@ -308,14 +308,25 @@ function getQueryVariable(variable)
 {
   var query = window.location.search.substring(1);
   var vars = query.split('&');
+  var key, value;
   for (var i = 0; i < vars.length; i++) {
     var pair = vars[i].split('=');
-    if(pair[0] == variable){
-      displayNeighborhood(pair[1]);
+    key = pair[0];
+    value = pair[1];
+    console.log('key: ' + key);
+    if( key === 'id' ){
+      for (var i = 0; i < neighborhoodArray.length; i++){
+        if (neighborhoodArray[i].pageLink === pair[1]){
+          displayNeighborhood(neighborhoodArray[i]);
+          return;
+        }
+      }
     }
+      // displayNeighborhood(window[pair[1]]);
+      // console.log('pair1: ' + pair[1]);
   }
-  return(false);
 }
+
 var neighborhoodCheck = document.getElementById('neighborhood-name');
 if (neighborhoodCheck) {
   getQueryVariable('id');
