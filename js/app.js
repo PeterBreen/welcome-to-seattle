@@ -48,15 +48,15 @@ fremont.addCharacteristic('walkability', true);
 fremont.map = 'https://www.google.com/maps/place/Wallingford,+Seattle,+WA/@47.6588266,-122.3519847,14z/data=!3m1!4b1!4m2!3m1!1s0x54901457beb77743:0x3352f3c14438fcbe';
 fremont.blurb = 'Fremont and Wallingford are where you go when you are a programmer who wishes they were cool and fun instead of an Amazon employee. Also, beer.';
 
-var wedgewood = new Neighborhood ('Wedgewood');
-wedgewood.addCharacteristic('nightLife', false);
-wedgewood.addCharacteristic('transitAccess', false);
-wedgewood.addCharacteristic('parks', true);
-wedgewood.addCharacteristic('singleFamily', true);
-wedgewood.addCharacteristic('rentApt', false);
-wedgewood.addCharacteristic('walkability', false);
-wedgewood.map = 'https://www.google.com/maps/place/Wedgwood,+Seattle,+WA+98115/@47.6813858,-122.3054952,14z/data=!4m2!3m1!1s0x5490139296838881:0xc07fc60562efdeb2';
-wedgewood.blurb = 'Wedgewood has a Top Pot. And some houses. Well, that\'s it.';
+var wedgwood = new Neighborhood ('wedgwood');
+wedgwood.addCharacteristic('nightLife', false);
+wedgwood.addCharacteristic('transitAccess', false);
+wedgwood.addCharacteristic('parks', true);
+wedgwood.addCharacteristic('singleFamily', true);
+wedgwood.addCharacteristic('rentApt', false);
+wedgwood.addCharacteristic('walkability', false);
+wedgwood.map = 'https://www.google.com/maps/place/Wedgwood,+Seattle,+WA+98115/@47.6813858,-122.3054952,14z/data=!4m2!3m1!1s0x5490139296838881:0xc07fc60562efdeb2';
+wedgwood.blurb = 'wedgwood has a Top Pot. And some houses. Well, that\'s it.';
 neighborhoodArray.push(fremont);
 
 var wedgwood = new Neighborhood ('wedgwood');
