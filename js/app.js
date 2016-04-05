@@ -149,3 +149,22 @@ rainier.addCharacteristic('parks', true);
 rainier.addCharacteristic('singleFamily', true);
 rainier.addCharacteristic('rentApt', false);
 rainier.addCharacteristic('walkability', false);
+
+function processUserAnswers(event){
+  event.preventDefault();
+  var nightLife = event.target.nightlifequestion.value;
+  console.log('nightlife: ', event.target.nightlifequestion.value);
+  var transitQuestion = event.target.transitquestion.value;
+  console.log('transit: ', event.target.transitquestion.value);
+  var parksQuestion = event.target.parksquestion.value;
+  console.log('parks: ', event.target.parksquestion.value);
+  var singleFamilyHousingQuestion = event.target.singlefamilyhousingquestion.value;
+  console.log('single family housing question: ', event.target.singlefamilyhousingquestion.value);
+  var rentableAptQuestion = event.target.rentableaptquestion.value;
+  console.log('rentable apartment question: ', event.target.rentableaptquestion.value);
+  var walkabilityQuestion = event.target.walkabilityquestion.value;
+  console.log('walkability question: ', event.target.walkabilityquestion.value);
+}
+
+var getUserAnswers = document.getElementById('help-me-choose-form');
+getUserAnswers.addEventListener('submit', processUserAnswers);
