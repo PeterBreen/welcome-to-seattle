@@ -11,23 +11,28 @@ body {
   width: 100%;
   display: block;
 }
-
-
+header {
+  width: 100%;
+  background-color: #000;
+}
+nav {
+padding: 0.1rem 0;
+}
+nav ul {
+padding: 0;
+margin-left: 1.5rem;
+align: right;
+}
 nav li {
+  font-size: 1.2rem;
   list-style-type: none;
   display: inline;
-  padding-right: 10px;
+  padding-right: 1rem;
 }
-
-.welcome-phrase {
-  align-content: center;
-  text-align: center;
+nav a  {
+  color: #fff;
+  text-decoration: none;
 }
-
-.main-photo {
-  max-width: 960px;
-  height: auto;
-background-image: url(images/MainCitySeattlePhoto.jpeg);
-background-size: cover;
-background-position: center;
+nav a:hover {
+  text-decoration: underline;
 }
