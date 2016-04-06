@@ -29,11 +29,11 @@ nav li {
   display: inline;
   padding-right: 1rem;
 }
-nav a, .welcome-text a {
+nav a {
   color: #fff;
   text-decoration: none;
 }
-nav a:hover, .welcome-text a:hover {
+nav a:hover {
   text-decoration: underline;
 }
 .header {
@@ -60,4 +60,22 @@ margin: 0 auto;
 .welcome-text h1 {
   font-size: 3rem;
   line-height: 3rem;
+}
+
+.get-started {
+  padding: 0.5rem;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+}
+.get-started:hover {
+  text-decoration: underline;
+}
+
+.places-link {
+  color: #fff;
+  text-decoration: none;
+}
+.places-link:hover {
+  text-decoration: underline;
 }

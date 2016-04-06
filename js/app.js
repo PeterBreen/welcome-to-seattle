@@ -522,6 +522,7 @@ function processComment(event){
   };
   commentsArray.push(commentObject);
   saveCommentsToLocal();
+  commentForm.reset();
 }
 
 function saveCommentsToLocal(){
