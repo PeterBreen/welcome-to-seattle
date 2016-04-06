@@ -6,17 +6,28 @@ header {
   display: block;
   width: 100%;
 }
-
-body {
+.subpage{
   width: 100%;
-  display: block;
+  height: 700px;
+  background-image: url(../images/header_img2.jpg);
+  max-width: 1980px;
+  background-attachment: fixed;
+  display: relative;
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
 }
+
 header {
   width: 100%;
   background-color: #000;
 }
 nav {
 padding: 0.1rem 0;
+margin-bottom: 50px;
+}
+.homepage nav{
+  margin-bottom: 100px;
 }
 nav ul {
 padding: 0;
@@ -36,26 +47,38 @@ nav a {
 nav a:hover {
   text-decoration: underline;
 }
-.header {
+.main {
+  max-width:60rem;
+  margin: 0 auto;
+  background-color: black;
+  opacity: 0.8;
+  color: white;
+  padding: 1rem;
+}
+.main h1{
+  margin-top: 0;
+}
+.homepage {
 background-image: url(../images/header_img1.jpg);
 height: 700px;
 max-width: 1980px;
+background-attachment: fixed;
+display: relative;
 background-position: center;
 background-size: cover;
-display: relative;
 margin: 0 auto;
 }
 .positioning-header {
   padding-top: 5rem;
 }
 .welcome-text {
-  width: 30rem;
+  width: 24rem;
   margin: 0 auto;
-  padding: 2rem 5rem;
+  padding: 1rem 2rem;
   text-align: center;
   background-color: #000;
   color: #fff;
-  opacity: 0.7;
+  opacity: 0.75;
 }
 .welcome-text h1 {
   font-size: 3rem;
@@ -63,11 +86,13 @@ margin: 0 auto;
 }
 
 .get-started {
-  padding: 0.5rem;
-  background-color: #fff;
+  padding: 0.5rem 0.7rem;
+  background-color: rgba(255, 255, 255, 1);
   color: #000;
+  font-size: 1.2rem;
   text-decoration: none;
 }
+
 .get-started:hover {
   text-decoration: underline;
 }
@@ -78,4 +103,21 @@ margin: 0 auto;
 }
 .places-link:hover {
   text-decoration: underline;
+}
+.question {
+  padding-bottom: 15px;
+  font-size: 1.1rem;
+  max-width: 60rem;
+}
+legend {
+  font-size: 1.7rem;
+}
+fieldset {
+  border: none;
+}
+@media screen and (min-width: 768px) {
+  .welcome-text {
+    width: 30rem;
+    padding: 2rem 5rem;
+  }
 }
