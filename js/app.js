@@ -371,17 +371,15 @@ function displayNeighborhood(neighborhood){
   document.getElementById('info-box').appendChild(blurbContent);
 
   currentNeighborhood = neighborhood.pageLink;
+
   var factsContent = document.createElement('ul');
-  var firstFact = document.createElement('li');
-  firstFact.textContent = neighborhood.factsList[0];
-  factsContent.appendChild(firstFact);
-  var secondFact = document.createElement('li');
-  secondFact.textContent = neighborhood.factsList[1];
-  factsContent.appendChild(secondFact);
-  var thirdFact = document.createElement('li');
-  thirdFact.textContent = neighborhood.factsList[2];
-  factsContent.appendChild(thirdFact);
   document.getElementById('info-box').appendChild(factsContent);
+
+  for (var i = 0; i < neighborhood.factsList.length; i++){
+    var facts = document.createElement('li');
+    facts.textContent = neighborhood.factsList[i];
+    factsContent.appendChild(facts);
+  }
 }
 
 function displayPlaces() {
