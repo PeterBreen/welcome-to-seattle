@@ -1,3 +1,7 @@
+html, body {
+  font-size: 16px;
+  font-family: 'Fira Sans', sans-serif;
+}
 header {
   display: block;
   width: 100%;
@@ -9,7 +13,7 @@ body {
 }
 
 
-li {
+nav li {
   list-style-type: none;
   display: inline;
   padding-right: 10px;
