@@ -8,6 +8,7 @@ function Neighborhood (name) {
   this.blurb = '';
   this.score = 0;
   this.pageLink = '';
+  this.factslist = [];
 }
 
 Neighborhood.prototype.addCharacteristic = function(characteristic, value) {
@@ -38,6 +39,7 @@ ballard.map = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42981.60533
 //API KEY FROM GOOGLE:  AIzaSyCHi1phlSzHRo-cQ8rUb3yBHxNrPcga62M
 ballard.blurb = 'Once you come here you can\'t leave, because no roads lead out of Ballard. Also, Scandinavian pride!';
 ballard.pageLink = 'ballard';
+ballard.factslist = ['The Hiram Chittendon Locks from Puget Sound to Lake Union', 'Scandanavian people and festival', 'Notable Residents: Danny Stineback and Matt Wilson'];
 neighborhoodArray.push(ballard);
 
 var fremont = new Neighborhood ('Fremont');
@@ -50,6 +52,7 @@ fremont.addCharacteristic('walkability', true);
 fremont.map = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21498.552535918265!2d-122.35198462623549!3d47.65879771802664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54901457beb77743%3A0x3352f3c14438fcbe!2sWallingford%2C+Seattle%2C+WA!5e0!3m2!1sen!2sus!4v1459890399833';
 fremont.blurb = 'Fremont and Wallingford are where you go when you are a programmer who wishes they were cool and fun instead of an Amazon employee. Also, beer.';
 fremont.pageLink = 'fremont';
+fremont.factslist = ['Summer Solstice Parade every year - famous for nude Solstice Cyclists', '"The center of the universe"', 'Notable Residents: Peter Breen, Jeff Russell, and the Fremont Troll'];
 neighborhoodArray.push(fremont);
 
 var wedgwood = new Neighborhood ('Wedgwood');
@@ -350,6 +353,18 @@ function displayNeighborhood(neighborhood){
   var blurbContent = document.createElement('section');
   blurbContent.textContent = neighborhood.blurb;
   document.getElementById('info-box').appendChild(blurbContent);
+
+  var factsContent = document.createElement('ul');
+  var firstFact = document.createElement('li');
+  firstFact.textContent = neighborhood.factslist[0];
+  factsContent.appendChild(firstFact);
+  var secondFact = document.createElement('li');
+  secondFact.textContent = neighborhood.factslist[1];
+  factsContent.appendChild(secondFact);
+  var thirdFact = document.createElement('li');
+  thirdFact.textContent = neighborhood.factslist[2];
+  factsContent.appendChild(thirdFact);
+  document.getElementById('info-box').appendChild(factsContent);
 }
 
 function displayPlaces() {
