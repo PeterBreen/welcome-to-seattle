@@ -49,13 +49,13 @@ margin: 0 auto;
   padding-top: 5rem;
 }
 .welcome-text {
-  width: 30rem;
+  width: 24rem;
   margin: 0 auto;
-  padding: 2rem 5rem;
+  padding: 1rem 2rem;
   text-align: center;
   background-color: #000;
   color: #fff;
-  opacity: 0.7;
+  opacity: 0.75;
 }
 .welcome-text h1 {
   font-size: 3rem;
@@ -63,11 +63,13 @@ margin: 0 auto;
 }
 
 .get-started {
-  padding: 0.5rem;
-  background-color: #fff;
+  padding: 0.5rem 0.7rem;
+  background-color: rgba(255, 255, 255, 1);
   color: #000;
+  font-size: 1.2rem;
   text-decoration: none;
 }
+
 .get-started:hover {
   text-decoration: underline;
 }
@@ -78,4 +80,10 @@ margin: 0 auto;
 }
 .places-link:hover {
   text-decoration: underline;
+}
+@media screen and (min-width: 768px) {
+  .welcome-text {
+    width: 30rem;
+    padding: 2rem 5rem;
+  }
 }
