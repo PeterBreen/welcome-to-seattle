@@ -477,7 +477,7 @@ function displayPlaces() {
   var resultsHeader = document.createElement('h2');
   resultsHeader.textContent = 'List of Neighborhoods';
   places.appendChild(resultsHeader);
-  var formResultsOL = document.createElement('ol');
+  var formResultsOL = document.createElement('ul');
   places.appendChild(formResultsOL);
   for (i = 0; i < neighborhoodArray.length; i++) {
     var formResultsLI = document.createElement('li');
