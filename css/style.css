@@ -104,6 +104,17 @@ margin: 0 auto;
 .places-link:hover {
   text-decoration: underline;
 }
+.question {
+  padding-bottom: 15px;
+  font-size: 1.1rem;
+  max-width: 60rem;
+}
+legend {
+  font-size: 1.7rem;
+}
+fieldset {
+  border: none;
+}
 @media screen and (min-width: 768px) {
   .welcome-text {
     width: 30rem;
