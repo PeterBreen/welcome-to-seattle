@@ -460,8 +460,8 @@ function displayNeighborhood(neighborhood){
     if (commentsArray[i].neighborhood === currentNeighborhood) {
       userComment.textContent = commentsArray[i].comment;
       inputName.textContent = commentsArray[i].username;
-      document.getElementById('comments').appendChild(userComment);
       document.getElementById('comments').appendChild(inputName);
+      document.getElementById('comments').appendChild(userComment);
     }
   }
 
