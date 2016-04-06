@@ -495,14 +495,6 @@ if (placesCheck) {
   displayPlaces();
 }
 
-//EVENT LISTENER FOR FORM PAGE
-var getUserAnswers = document.getElementById('help-me-choose-form');
-getUserAnswers.addEventListener('submit', processUserAnswers);
-
-//EVENT LISTENER FOR COMMENTS
-var commentForm = document.getElementById('neighborhood-comment-form');
-commentForm.addEventListener('submit', processComment);
-
 function processComment(event){
   event.preventDefault();
   var userComment = document.createElement('p');
@@ -535,3 +527,11 @@ function fetchCommentsFromLocal(){
     console.log('User has comments from last time.');
     commentsArray = savedComments; }
 }
+
+//EVENT LISTENER FOR FORM PAGE
+var getUserAnswers = document.getElementById('help-me-choose-form');
+getUserAnswers.addEventListener('submit', processUserAnswers);
+
+//EVENT LISTENER FOR COMMENTS
+var commentForm = document.getElementById('neighborhood-comment-form');
+commentForm.addEventListener('submit', processComment);

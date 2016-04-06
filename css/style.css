@@ -125,10 +125,20 @@ margin: 0 auto;
   text-decoration: underline;
 }
 .question {
+  margin-left: 30px;
   padding-bottom: 15px;
   font-size: 1.1rem;
   max-width: 60rem;
 }
+
+.answer {
+  margin-left: 30px;
+}
+
+.submit {
+margin-left: 60px;
+}
+
 legend {
   font-size: 1.7rem;
 }
