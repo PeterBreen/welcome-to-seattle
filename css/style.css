@@ -11,23 +11,53 @@ body {
   width: 100%;
   display: block;
 }
-
-
+header {
+  width: 100%;
+  background-color: #000;
+}
+nav {
+padding: 0.1rem 0;
+}
+nav ul {
+padding: 0;
+margin-left: 1.5rem;
+align: right;
+}
 nav li {
+  font-size: 1.2rem;
   list-style-type: none;
   display: inline;
-  padding-right: 10px;
+  padding-right: 1rem;
 }
-
-.welcome-phrase {
-  align-content: center;
-  text-align: center;
+nav a, .welcome-text a {
+  color: #fff;
+  text-decoration: none;
 }
-
-.main-photo {
-  max-width: 960px;
-  height: auto;
-background-image: url(images/MainCitySeattlePhoto.jpeg);
-background-size: cover;
+nav a:hover, .welcome-text a:hover {
+  text-decoration: underline;
+}
+.header {
+background-image: url(../images/header_img1.jpg);
+height: 700px;
+max-width: 1980px;
 background-position: center;
+background-size: cover;
+display: relative;
+margin: 0 auto;
+}
+.positioning-header {
+  padding-top: 5rem;
+}
+.welcome-text {
+  width: 30rem;
+  margin: 0 auto;
+  padding: 2rem 5rem;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  opacity: 0.7;
+}
+.welcome-text h1 {
+  font-size: 3rem;
+  line-height: 3rem;
 }
