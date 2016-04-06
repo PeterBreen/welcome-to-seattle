@@ -37,12 +37,13 @@ nav a:hover, .welcome-text a:hover {
   text-decoration: underline;
 }
 .header {
-background-image: url(../images/header_img2.jpg);
+background-image: url(../images/header_img1.jpg);
 height: 700px;
 max-width: 1980px;
 background-position: center;
 background-size: cover;
 display: relative;
+margin: 0 auto;
 }
 .positioning-header {
   padding-top: 5rem;
@@ -54,7 +55,7 @@ display: relative;
   text-align: center;
   background-color: #000;
   color: #fff;
-  opacity: 0.6;
+  opacity: 0.7;
 }
 .welcome-text h1 {
   font-size: 3rem;
