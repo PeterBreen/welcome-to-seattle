@@ -163,7 +163,7 @@ southLakeUnion.addCharacteristic('arts', false);
 southLakeUnion.addCharacteristic('hipsters', true);
 southLakeUnion.map = 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10755.872698696478!2d-122.3462894!3d47.6267499!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490153bc67a5d5b%3A0xa91e9c10a999a3be!2sSouth+Lake+Union%2C+Seattle%2C+WA!5e0!3m2!1sen!2sus!4v1459890108270';
 southLakeUnion.blurb = 'Watch out for "Amazombies" who are ruining the neighborhood ... which used to be a pile of condemned warehouses.';
-southLakeUnion.factsList = ['The new tech center of Seattle', 'Has a streetcar that goes downtown. Transit name is "SLUT"'];
+southLakeUnion.factsList = ['The new tech center of Seattle', 'Has a streetcar that goes downtown. Transit name is "SLUT"', 'Notable Developer: Paul Allen (Vulcan - is he?)'];
 southLakeUnion.pageLink = 'southLakeUnion';
 neighborhoodArray.push(southLakeUnion);
 
