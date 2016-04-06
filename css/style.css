@@ -22,10 +22,12 @@ header {
   width: 100%;
   background-color: #000;
 }
+
 nav {
 padding: 0.1rem 0;
 margin-bottom: 50px;
 }
+
 .homepage nav{
   margin-bottom: 100px;
 }
@@ -40,12 +42,30 @@ nav li {
   display: inline;
   padding-right: 1rem;
 }
+nav ul ul {
+	display: none;
+}
+
+nav ul li:hover > ul {
+		display: block;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    padding-left: 10px;
+    z-index: 1;
+    background-color: black;
+	}
+
 nav a {
   color: #fff;
   text-decoration: none;
 }
 nav a:hover {
   text-decoration: underline;
+}
+.hpsection{
+  margin-bottom: 120px;
 }
 .main {
   max-width:60rem;
@@ -60,10 +80,10 @@ nav a:hover {
 }
 .homepage {
 background-image: url(../images/header_img1.jpg);
-height: 700px;
+height: 100%
 max-width: 1980px;
 background-attachment: fixed;
-display: relative;
+/*display: relative;*/
 background-position: center;
 background-size: cover;
 margin: 0 auto;
@@ -114,6 +134,15 @@ legend {
 }
 fieldset {
   border: none;
+}
+footer{
+  width: 100%;
+  background-color: #000;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px;
+  opacity: 0.8;
 }
 @media screen and (min-width: 768px) {
   .welcome-text {
