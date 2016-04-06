@@ -48,7 +48,7 @@ ballard.pageLink = 'ballard';
 ballard.factsList = ['The Hiram Chittendon Locks from Puget Sound to Lake Union', 'Scandanavian people and festival', 'Notable Residents: Danny Stineback and Matt Wilson'];
 neighborhoodArray.push(ballard);
 
-var fremont = new Neighborhood ('Fremont');
+var fremont = new Neighborhood ('Fremont, Phinney Ridge, Wallingford, and Green Lake');
 fremont.addCharacteristic('nightLife', true);
 fremont.addCharacteristic('transitAccess', true);
 fremont.addCharacteristic('parks', true);
@@ -65,7 +65,7 @@ fremont.pageLink = 'fremont';
 fremont.factsList = ['Summer Solstice Parade every year - famous for nude Solstice Cyclists', '"The center of the universe"', 'Notable Residents: Peter Breen, Jeff Russell, and the Fremont Troll'];
 neighborhoodArray.push(fremont);
 
-var wedgwood = new Neighborhood ('Wedgwood');
+var wedgwood = new Neighborhood ('Wedgwood, View Ridge, Ravenna, Bryant, and Laurelhurst');
 wedgwood.addCharacteristic('nightLife', false);
 wedgwood.addCharacteristic('transitAccess', false);
 wedgwood.addCharacteristic('parks', true);
@@ -99,7 +99,7 @@ universityDistrict.factsList = ['The University of Washington is located here', 
 universityDistrict.pageLink = 'universityDistrict';
 neighborhoodArray.push(universityDistrict);
 
-var northgate = new Neighborhood ('Northgate');
+var northgate = new Neighborhood ('Far North Seattle');
 northgate.addCharacteristic('nightLife', false);
 northgate.addCharacteristic('transitAccess', true);
 northgate.addCharacteristic('parks', false);
