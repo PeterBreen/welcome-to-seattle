@@ -1,5 +1,7 @@
 var userInputArray = [];
 var neighborhoodArray = [];
+var currentNeighborhood;
+var commentsArray = [];
 
 function Neighborhood (name) {
   this.name = name;
@@ -368,6 +370,7 @@ function displayNeighborhood(neighborhood){
   blurbContent.textContent = neighborhood.blurb;
   document.getElementById('info-box').appendChild(blurbContent);
 
+  currentNeighborhood = neighborhood.pageLink;
   var factsContent = document.createElement('ul');
   var firstFact = document.createElement('li');
   firstFact.textContent = neighborhood.factsList[0];
@@ -407,3 +410,31 @@ if (placesCheck) {
 //EVENT LISTENER FOR FORM PAGE
 var getUserAnswers = document.getElementById('help-me-choose-form');
 getUserAnswers.addEventListener('submit', processUserAnswers);
+
+//EVENT LISTENER FOR COMMENTS
+var commentForm = document.getElementById('neighborhood-comment-form');
+commentForm.addEventListener('submit', processComment);
+
+function processComment(event){
+  event.preventDefault();
+  var userComment = document.createElement('p');
+  userComment.setAttribute('class', currentNeighborhood);
+  userComment.textContent = event.target.comment.value;
+  console.log(userComment);
+  document.getElementById('comments').appendChild(userComment);
+  commentsArray.push(userComment);
+}
+
+function saveCommentsToLocal(){
+  localStorage.setItem('savedComments', JSON.stringify(commentsArray));
+}
+
+//this is to pull the array back down
+// function fetchCommentsFromLocal(){
+//   var savedTotal = JSON.parse(localStorage.getItem('savedTotal'));
+//   allTheClicks = savedTotal;
+//   var savedClicks = JSON.parse(localStorage.getItem('savedClicks'));
+//   if (savedClicks){
+//     console.log('User has saved their clicks from last time.');
+//     pictureArray = savedClicks; }
+// }
