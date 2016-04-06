@@ -29,10 +29,34 @@ nav li {
   display: inline;
   padding-right: 1rem;
 }
-nav a  {
+nav a, .welcome-text a {
   color: #fff;
   text-decoration: none;
 }
-nav a:hover {
+nav a:hover, .welcome-text a:hover {
   text-decoration: underline;
+}
+.header {
+background-image: url(../images/header_img2.jpg);
+height: 700px;
+max-width: 1980px;
+background-position: center;
+background-size: cover;
+display: relative;
+}
+.positioning-header {
+  padding-top: 5rem;
+}
+.welcome-text {
+  width: 30rem;
+  margin: 0 auto;
+  padding: 2rem 5rem;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  opacity: 0.6;
+}
+.welcome-text h1 {
+  font-size: 3rem;
+  line-height: 3rem;
 }
