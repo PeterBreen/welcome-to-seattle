@@ -358,6 +358,9 @@ if (neighborhoodCheck) {
 
 //DISPLAY PAGE CONTENT FOR NEIGHBORHOOD.HTML
 function displayNeighborhood(neighborhood){
+
+  fetchCommentsFromLocal();
+
   var title = document.createElement('h1');
   title.textContent = neighborhood.name;
   document.getElementById('neighborhood-name').appendChild(title);
@@ -382,6 +385,14 @@ function displayNeighborhood(neighborhood){
   thirdFact.textContent = neighborhood.factsList[2];
   factsContent.appendChild(thirdFact);
   document.getElementById('info-box').appendChild(factsContent);
+
+  for (var i = 0; i < commentsArray.length; i++) {
+    var userComment = document.createElement('p');
+    if (commentsArray[i].neighborhood === currentNeighborhood) {
+      userComment.textContent = commentsArray[i].comment;
+      document.getElementById('comments').appendChild(userComment);
+    }
+  }
 }
 
 function displayPlaces() {
@@ -422,19 +433,21 @@ function processComment(event){
   userComment.textContent = event.target.comment.value;
   console.log(userComment);
   document.getElementById('comments').appendChild(userComment);
-  commentsArray.push(userComment);
+  var commentObject = {
+    neighborhood: currentNeighborhood,
+    comment: userComment.textContent
+  };
+  commentsArray.push(commentObject);
+  saveCommentsToLocal();
 }
 
 function saveCommentsToLocal(){
   localStorage.setItem('savedComments', JSON.stringify(commentsArray));
 }
 
-//this is to pull the array back down
-// function fetchCommentsFromLocal(){
-//   var savedTotal = JSON.parse(localStorage.getItem('savedTotal'));
-//   allTheClicks = savedTotal;
-//   var savedClicks = JSON.parse(localStorage.getItem('savedClicks'));
-//   if (savedClicks){
-//     console.log('User has saved their clicks from last time.');
-//     pictureArray = savedClicks; }
-// }
+function fetchCommentsFromLocal(){
+  var savedComments = JSON.parse(localStorage.getItem('savedComments'));
+  if (savedComments){
+    console.log('User has comments from last time.');
+    commentsArray = savedComments; }
+}
