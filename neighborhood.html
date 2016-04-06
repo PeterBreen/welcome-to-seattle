@@ -6,7 +6,7 @@
   <link href='https://fonts.googleapis.com/css?family=Fira+Sans' rel='stylesheet' type='text/css'>
   <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body class="subpage">
   <header>
   <nav>
     <ul>
@@ -17,28 +17,29 @@
     </ul>
   </nav>
   </header>
-  <section class="neighborhood-name" id="neighborhood-name"></section>
-  <section class="info-box" id="info-box"></section>
-  <div class="google-map" id="google-map"></div>
-  <section class="comments" id="comments"></section>
+  <div class="main">
+    <section class="neighborhood-name" id="neighborhood-name"></section>
+    <section class="info-box" id="info-box"></section>
+    <div class="google-map" id="google-map"></div>
+    <section class="comments" id="comments"></section>
 
-  <section>
-    <form id="neighborhood-comment-form">
-      <fieldset>
-        <legend>Let us know what you think of this neighborhood!</legend>
-        <label name="nameofuser">Name: </label>
-        <input name="nameofuser" type="text">
-        <label name="comment">Comment: </label>
-        <input name="comment" type="text">
-        <button type="submit">Enter</button>
-      </fieldset>
-    </form>
-  </section>
+    <section>
+      <form id="neighborhood-comment-form">
+        <fieldset>
+          <legend>Let us know what you think of this neighborhood!</legend>
+          <label name="nameofuser">Name: </label>
+          <input name="nameofuser" type="text">
+          <label name="comment">Comment: </label>
+          <input name="comment" type="text">
+          <button type="submit">Enter</button>
+        </fieldset>
+      </form>
+    </section>
+  </div>
 
-  <form id="help-me-choose-form"></form>
+  <!-- <form id="help-me-choose-form"></form> -->
 
   <footer></footer>
   <script src="js/app.js"></script>
-<!--  <script src="js/app2.js"></script>-->
 </body>
 </html>
