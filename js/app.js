@@ -2,6 +2,7 @@ var userInputArray = [];
 var neighborhoodArray = [];
 var currentNeighborhood;
 var commentsArray = [];
+var questionArray = [];
 
 function Neighborhood (name) {
   this.name = name;
@@ -21,15 +22,6 @@ Neighborhood.prototype.addCharacteristic = function(characteristic, value) {
   this.characteristics.push(char);
 };
 
-//THESE DON'T WORK!!
-// Neighborhood.prototype.addMap = function(url) {
-//   this.map = url;
-// };
-//
-// Neighborhood.prototype.addBlurb = function(blurb) {
-//   this.blurb = blurb;
-// };
-
 var ballard = new Neighborhood ('Ballard');
 ballard.addCharacteristic('nightLife', true);
 ballard.addCharacteristic('transitAccess', false);
@@ -42,7 +34,6 @@ ballard.addCharacteristic('restaurants', true);
 ballard.addCharacteristic('arts', true);
 ballard.addCharacteristic('hipsters', true);
 ballard.map = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42981.60533212787!2d-122.42219963318377!3d47.67761592236304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549015d57a5da881%3A0xd07680ac0ad3f49c!2sBallard%2C+Seattle%2C+WA!5e0!3m2!1sen!2sus!4v1459889721120';
-//API KEY FROM GOOGLE:  AIzaSyCHi1phlSzHRo-cQ8rUb3yBHxNrPcga62M
 ballard.blurb = 'Once you come here you can\'t leave, because no roads lead out of Ballard. Also, Scandinavian pride!';
 ballard.pageLink = 'ballard';
 ballard.factsList = ['The Hiram Chittendon Locks from Puget Sound to Lake Union', 'Scandanavian people and festival', 'Notable Residents: Danny Stineback and Matt Wilson'];
@@ -353,31 +344,31 @@ function processUserAnswers(event){
   console.log('nightlife: ', event.target.nightlifequestion.value);
   createUserArray('nightLife', nightLifeQuestion);
   var transitQuestion = event.target.transitquestion.value;
-  console.log('transit: ', event.target.transitquestion.value);
+  //console.log('transit: ', event.target.transitquestion.value);
   createUserArray('transitAccess', transitQuestion);
   var parksQuestion = event.target.parksquestion.value;
-  console.log('parks: ', event.target.parksquestion.value);
+  //console.log('parks: ', event.target.parksquestion.value);
   createUserArray('parks', parksQuestion);
   var singleFamilyHousingQuestion = event.target.singlefamilyhousingquestion.value;
-  console.log('single family housing question: ', event.target.singlefamilyhousingquestion.value);
+  //console.log('single family housing question: ', event.target.singlefamilyhousingquestion.value);
   createUserArray('singleFamily', singleFamilyHousingQuestion);
   var rentableAptQuestion = event.target.rentableaptquestion.value;
-  console.log('rentable apartment question: ', event.target.rentableaptquestion.value);
+  //console.log('rentable apartment question: ', event.target.rentableaptquestion.value);
   createUserArray('rentApt', rentableAptQuestion);
   var walkabilityQuestion = event.target.walkabilityquestion.value;
-  console.log('walkability question: ', event.target.walkabilityquestion.value);
+  //console.log('walkability question: ', event.target.walkabilityquestion.value);
   createUserArray('walkability', walkabilityQuestion);
   var urbanQuestion = event.target.urbanquestion.value;
-  console.log('urbanquestion: ', event.target.urbanquestion.value);
+  //console.log('urbanquestion: ', event.target.urbanquestion.value);
   createUserArray('urban', urbanQuestion);
   var restaurantQuestion = event.target.restaurantquestion.value;
-  console.log('restaurant: ', event.target.restaurantquestion.value);
+  //console.log('restaurant: ', event.target.restaurantquestion.value);
   createUserArray('restaurant', restaurantQuestion);
   var artsQuestion = event.target.artsquestion.value;
-  console.log('artsQuestion: ', event.target.artsquestion.value);
+  //console.log('artsQuestion: ', event.target.artsquestion.value);
   createUserArray('arts', artsQuestion);
   var hipsterQuestion = event.target.hipsterquestion.value;
-  console.log('hipsterquestion: ', event.target.hipsterquestion.value);
+  //console.log('hipsterquestion: ', event.target.hipsterquestion.value);
   createUserArray('hipster', hipsterQuestion);
 
   assignNeighborhoodScores();
@@ -388,7 +379,7 @@ function processUserAnswers(event){
 function appendResultList() {
   var formResults = document.getElementById('form-results');
   var resultsHeader = document.createElement('h2');
-  resultsHeader.textContent = 'Neighborhoods that best match your criteria';
+  resultsHeader.textContent = 'Here are the neighborhoods that meet your needs in order from best to worst:';
   formResults.appendChild(resultsHeader);
   var formResultsOL = document.createElement('ol');
   formResults.appendChild(formResultsOL);
@@ -422,8 +413,6 @@ function getQueryVariable(variable)
         }
       }
     }
-      // displayNeighborhood(window[pair[1]]);
-      // console.log('pair1: ' + pair[1]);
   }
 }
 
