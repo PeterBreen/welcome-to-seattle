@@ -456,9 +456,12 @@ function displayNeighborhood(neighborhood){
 
   for (var i = 0; i < commentsArray.length; i++) {
     var userComment = document.createElement('p');
+    var inputName = document.createElement('p');
     if (commentsArray[i].neighborhood === currentNeighborhood) {
       userComment.textContent = commentsArray[i].comment;
+      inputName.textContent = commentsArray[i].username;
       document.getElementById('comments').appendChild(userComment);
+      document.getElementById('comments').appendChild(inputName);
     }
   }
 
@@ -504,11 +507,17 @@ function processComment(event){
   event.preventDefault();
   var userComment = document.createElement('p');
   userComment.setAttribute('class', currentNeighborhood);
-  userComment.textContent = event.target.comment.value;
+  userComment.textContent = 'Comment: ' + event.target.comment.value;
   console.log(userComment);
+  var inputName = document.createElement('p');
+  inputName.setAttribute('class', currentNeighborhood);
+  inputName.textContent = 'Name: ' + event.target.nameofuser.value;
+  console.log(inputName);
+  document.getElementById('comments').appendChild(inputName);
   document.getElementById('comments').appendChild(userComment);
   var commentObject = {
     neighborhood: currentNeighborhood,
+    username: inputName.textContent,
     comment: userComment.textContent
   };
   commentsArray.push(commentObject);
