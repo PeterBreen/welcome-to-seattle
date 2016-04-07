@@ -62,7 +62,7 @@ nav a {
   text-decoration: none;
 }
 nav a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 .hpsection{
   margin-bottom: 120px;
@@ -179,6 +179,23 @@ footer{
 }
 .areWeThereYet h1{
   margin-bottom: -15px;
+}
+
+.places-list {
+  color: rgb(155,161,162);
+}
+
+li a {
+  color: white;
+  text-decoration: none;
+}
+
+li a:hover {
+    color: rgb(105,190,40);
+}
+
+.main li {
+  font-size: 1.5rem;
 }
 
 @media screen and (min-width: 768px) {

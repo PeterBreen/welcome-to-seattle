@@ -58,20 +58,31 @@ questionArray.push(hipsterQuestion);
 
 for (var i = 0; i < questionArray.length; i++){
   var aquestion = document.createElement('label');
+  aquestion.setAttribute('class', 'questionCSS');
+  var space = document.createElement('br');
   var input1 = document.createElement('input');
+  var yes = document.createElement('p');
   input1.type = 'radio';
   input1.value = 'true';
   input1.name = questionArray[i].name;
-  input1.textContent = 'YES';
+  input1.setAttribute('class', 'answerCSS');
+  yes.textContent = 'YES';
+  yes.setAttribute('class', 'answerCSS');
   var input2 = document.createElement('input');
+  var no = document.createElement('p');
   input2.type = 'radio';
   input2.value = 'false';
   input2.name = questionArray[i].name;
-  input2.textContent = 'NO';
+  input2.setAttribute('class', 'answerCSS');
+  no.textContent = 'NO';
+  no.setAttribute('class', 'answerCSS');
   aquestion.textContent = questionArray[i].question;
   document.getElementById('question-space').appendChild(aquestion);
+  document.getElementById('question-space').appendChild(yes);
   document.getElementById('question-space').appendChild(input1);
+  document.getElementById('question-space').appendChild(no);
   document.getElementById('question-space').appendChild(input2);
+  document.getElementById('question-space').appendChild(space);
 }
 
 function scoreAssignment(neighborhood){
