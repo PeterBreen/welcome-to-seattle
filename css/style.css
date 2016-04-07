@@ -63,9 +63,6 @@ nav a {
   color: #fff;
   text-decoration: none;
 }
-nav a:hover {
-  text-decoration: none;
-}
 .hpsection{
   margin-bottom: 120px;
 }
@@ -195,12 +192,12 @@ footer {
   color: rgb(155,161,162);
 }
 
-li a {
+li a, footer a {
   color: white;
   text-decoration: none;
 }
 
-li a:hover {
+li a:hover, footer a:hover {
     color: rgb(105,190,40);
 }
 
