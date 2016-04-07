@@ -35,6 +35,7 @@ ballard.addCharacteristic('hipsters', true);
 ballard.map = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42981.60533212787!2d-122.42219963318377!3d47.67761592236304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549015d57a5da881%3A0xd07680ac0ad3f49c!2sBallard%2C+Seattle%2C+WA!5e0!3m2!1sen!2sus!4v1459889721120';
 ballard.blurb = 'Once you come here you can\'t leave, because no roads lead out of Ballard. Also, Scandinavian pride!';
 ballard.pageLink = 'ballard';
+ballard.photo = 'images/ballard.jpg';
 ballard.factsList = ['The Hiram Chittendon Locks from Puget Sound to Lake Union', 'Scandanavian people and festival', 'Notable Residents: Danny Stineback and Matt Wilson'];
 neighborhoodArray.push(ballard);
 
@@ -52,6 +53,7 @@ fremont.addCharacteristic('hipsters', true);
 fremont.map = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21498.552535918265!2d-122.35198462623549!3d47.65879771802664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54901457beb77743%3A0x3352f3c14438fcbe!2sWallingford%2C+Seattle%2C+WA!5e0!3m2!1sen!2sus!4v1459890399833';
 fremont.blurb = 'Fremont and Wallingford are where you go when you are a programmer who wishes they were cool and fun instead of an Amazon employee. Also, beer.';
 fremont.pageLink = 'fremont';
+fremont.photo = 'images/fremont.jpg';
 fremont.factsList = ['Summer Solstice Parade every year - famous for nude Solstice Cyclists', '"The center of the universe"', 'Notable Residents: Peter Breen, Jeff Russell, and the Fremont Troll'];
 neighborhoodArray.push(fremont);
 
@@ -87,6 +89,7 @@ universityDistrict.addCharacteristic('hipsters', false);
 universityDistrict.map = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21497.699773564327!2d-122.3218460762309!3d47.660868668035604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490148c0b84130f%3A0x4d2cfb91a6c76626!2sUniversity+District%2C+Seattle%2C+WA!5e0!3m2!1sen!2sus!4v1459889900124';
 universityDistrict.blurb = 'The U-District has a million restaraunts and only two are good. Also a university, which means undergrads, which means loud parties and broken beer bottles.';
 universityDistrict.factsList = ['The University of Washington is located here', 'University Ave is commonly known as "the ave"', 'Notable Resident: Rashid Baset'];
+universityDistrict.photo = 'images/udistrict.jpg';
 universityDistrict.pageLink = 'universityDistrict';
 neighborhoodArray.push(universityDistrict);
 
@@ -104,6 +107,7 @@ northgate.addCharacteristic('hipsters', false);
 northgate.map = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42956.08300560333!2d-122.35909688290492!3d47.7085902729062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549013fdf9b04609%3A0x6e358615536e06a2!2sNorthgate%2C+Seattle%2C+WA!5e0!3m2!1sen!2sus!4v1459889979594';
 northgate.blurb = 'Northgate is Seattle\'s shield against the danger of Shoreline. Haha sorry actually it\'s just a boring place with a really good bus route to downtown.';
 northgate.factsList = ['There\'s a mall.', 'North Seattle College', 'On the south end of Thornton Creek'];
+northgate.photo = 'images/northgate.jpg';
 northgate.pageLink = 'northgate';
 neighborhoodArray.push(northgate);
 
@@ -121,6 +125,7 @@ magnolia.addCharacteristic('hipsters', false);
 magnolia.map = 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21502.066033919975!2d-122.4178286!3d47.6502644!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490158eb496d123%3A0x6c16c045cca07825!2sMagnolia%2C+Seattle%2C+WA!5e0!3m2!1sen!2sus!4v1459890035509';
 magnolia.blurb = 'Magnolia is where rich people live, and you know what that means. Look on the bright side - their multimillion mansions are likely to slide off the cliff into the Sound someday.';
 magnolia.factsList = ['Magnolia\'s business district is called "the Village"', 'Discovery Park is located here. This is the city\'s largest park', 'Magnolia Park overlooks Puget Sound, Mount Rainier, and the Seattle skyline'];
+magnolia.photo = 'images/magnolia.jpg';
 magnolia.pageLink = 'magnolia';
 neighborhoodArray.push(magnolia);
 
@@ -138,6 +143,7 @@ queenAnne.addCharacteristic('hipsters', false);
 queenAnne.map = 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d43012.004286089155!2d-122.3887881!3d47.6407033!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490156ba01b4e4b%3A0xde5bdfe9498e9df5!2sQueen+Anne%2C+Seattle%2C+WA!5e0!3m2!1sen!2sus!4v1459890062326';
 queenAnne.blurb = 'Queen Anne is where you go to have the best quads in the entire city. CLIMB THAT HILL, CITIZEN.';
 queenAnne.factsList = ['Sits on the highest named hill in Seattle', 'Populated by mostly unmarried young adults', 'Frasier lived in Queen Anne'];
+queenAnne.photo = 'images/queenanne.jpg';
 queenAnne.pageLink = 'queenAnne';
 neighborhoodArray.push(queenAnne);
 
@@ -173,6 +179,7 @@ downtown.addCharacteristic('hipsters', false);
 downtown.map = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43041.078709006615!2d-122.37055658383359!3d47.60537872112048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906ab6b122572d%3A0x4cc65f51348e1d43!2sDowntown%2C+Seattle%2C+WA!5e0!3m2!1sen!2sus!4v1459890138313';
 downtown.blurb = 'Hello? Does anyone live here? I\'m stuck in the Chipotle on 3rd, send help...';
 downtown.pageLink = 'downtown';
+downtown.photo = 'images/downtown.jpg';
 downtown.factsList = ['Where the tall buildings are', 'Many new tall buildings are residential towers, which means some people actually live downtown now', 'Notable Resident: Claire Gatenby'];
 neighborhoodArray.push(downtown);
 
@@ -190,6 +197,7 @@ capitolHill.addCharacteristic('hipsters', true);
 capitolHill.map = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21511.287199795017!2d-122.33332167630465!3d47.62786321789353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490152857c86161%3A0xef487dc6bbc25185!2sCapitol+Hill%2C+Seattle%2C+WA!5e0!3m2!1sen!2sus!4v1459890163504';
 capitolHill.blurb = '"This place is getting ruined by new transplants," say last year\'s crop of transplants';
 capitolHill.factsList = ['The most densely populated area in Seattle', 'Known as the home for Seattle\'s gay and lesbian population, or Seattle\'s "gayborhood"', 'Notable Resident: Chris Perez'];
+capitolHill.photo = 'images/capitolhill.jpg';
 capitolHill.pageLink = 'capitolHill';
 neighborhoodArray.push(capitolHill);
 
@@ -207,6 +215,7 @@ centralDistrict.addCharacteristic('hipsters', false);
 centralDistrict.map = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43042.57134845259!2d-122.33315538384988!3d47.60356467108971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906add4f876051%3A0x5aa3698cad106fba!2sCentral+District%2C+Seattle%2C+WA!5e0!3m2!1sen!2sus!4v1459890196416';
 centralDistrict.blurb = 'Seattle\'s best kept secret: A place you might want to live, with rent you might be able to afford! Makes you wonder what the catch is.';
 centralDistrict.factsList = ['A very diverse residential neighborhood', 'Centrally located in Seattle (believe it or not)', 'Notable Residents: Stefanie Hansen, Bruce Lee, Jimi Hendrix, Quincy Jones'];
+centralDistrict.photo = 'images/centraldistrict.jpg';
 centralDistrict.pageLink = 'centralDistrict';
 neighborhoodArray.push(centralDistrict);
 
@@ -242,6 +251,7 @@ delridge.addCharacteristic('hipsters', false);
 delridge.map = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43086.79239722844!2d-122.38714583433305!3d47.54979767018751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549041a435d7a96d%3A0xa6d4695b2fcf828e!2sDelridge%2C+Seattle%2C+WA!5e0!3m2!1sen!2sus!4v1459890254235';
 delridge.blurb = 'I didn\'t even know this was a neighborhood until today. Rent is still probably stratospheric.';
 delridge.factsList = ['Borders the beautiful Duwamish River', 'Could be listed as part of West Seattle, but is not', 'Notable residents: Yes'];
+delridge.photo = 'images/delridge.jpg';
 delridge.pageLink = 'delridge';
 neighborhoodArray.push(delridge);
 
@@ -259,6 +269,7 @@ georgetown.addCharacteristic('hipsters', true);
 georgetown.map = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43094.880446457166!2d-122.35209893442145!3d47.53995867002443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490418d0563a897%3A0xae40817516315950!2sGeorgetown%2C+Seattle%2C+WA!5e0!3m2!1sen!2sus!4v1459890281392';
 georgetown.blurb = 'Do you like airplanes, repurposed old brick buildings, and breweries? Have I got the place for you!';
 georgetown.factsList = ['Right by Boeing Field', 'Known for Georgetown Brewery and Manny\'s Pale Ale', 'Notable person who has had a drink in Georgetown: Peter'];
+georgetown.photo = 'images/georgetown.jpg';
 georgetown.pageLink = 'georgetown';
 neighborhoodArray.push(georgetown);
 
@@ -276,6 +287,7 @@ beaconHill.addCharacteristic('hipsters', false);
 beaconHill.map = 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d43082.49127214013!2d-122.3377812!3d47.5550293!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549041e094683b21%3A0x61090fa06d3e8c16!2sBeacon+Hill%2C+Seattle%2C+WA!5e0!3m2!1sen!2sus!4v1459890313448';
 beaconHill.blurb = 'Has a light rail station.';
 beaconHill.factsList = ['Has the Pac Med building, formerly a marine hospital and former headquarters of Amazon.com', 'Has a light rail station', 'Home of the Beacon Food Forest, a large (15 acre) garden'];
+beaconHill.photo = 'images/beaconhill.jpg';
 beaconHill.pageLink = 'beaconHill';
 neighborhoodArray.push(beaconHill);
 
@@ -293,6 +305,7 @@ rainier.addCharacteristic('hipsters', false);
 rainier.map = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86184.18691236117!2d-122.34077429029506!3d47.54334917975777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549069ff2c41cc23%3A0xa0c3ca7d3fbb1c04!2sRainier+Valley%2C+Seattle%2C+WA!5e0!3m2!1sen!2sus!4v1459890340990';
 rainier.blurb = 'Seward Park is pretty cool. Also lots of people are afraid of being south of the domes, so take advantage of their ignorance!';
 rainier.factsList = ['One of the most culturally diverse neighborhoods in Seattle', 'Home of the Rainier Beach Vikings, a perennial high school basketball powerhouse', 'Seward Park is located in this area, a large peninsular park that juts out in to Lake Washington'];
+rainier.photo = 'images/rainier.jpg';
 rainier.pageLink = 'rainier';
 neighborhoodArray.push(rainier);
 
