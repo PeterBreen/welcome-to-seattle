@@ -84,7 +84,7 @@ universityDistrict.addCharacteristic('arts', false);
 universityDistrict.addCharacteristic('hipsters', false);
 universityDistrict.map = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21497.699773564327!2d-122.3218460762309!3d47.660868668035604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490148c0b84130f%3A0x4d2cfb91a6c76626!2sUniversity+District%2C+Seattle%2C+WA!5e0!3m2!1sen!2sus!4v1459889900124';
 universityDistrict.blurb = 'The U-District has a million restaraunts and only two are good. Also a university, which means undergrads, which means loud parties and broken beer bottles.';
-universityDistrict.factsList = ['The University of Washington is located here', 'University Ave is commonly known as "the ave"', 'Noteable Resident: Rashid Baset'];
+universityDistrict.factsList = ['The University of Washington is located here', 'University Ave is commonly known as "the ave"', 'Notable Resident: Rashid Baset'];
 universityDistrict.pageLink = 'universityDistrict';
 neighborhoodArray.push(universityDistrict);
 
@@ -170,7 +170,7 @@ downtown.addCharacteristic('hipsters', false);
 downtown.map = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43041.078709006615!2d-122.37055658383359!3d47.60537872112048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906ab6b122572d%3A0x4cc65f51348e1d43!2sDowntown%2C+Seattle%2C+WA!5e0!3m2!1sen!2sus!4v1459890138313';
 downtown.blurb = 'Hello? Does anyone live here? I\'m stuck in the Chipotle on 3rd, send help...';
 downtown.pageLink = 'downtown';
-downtown.factsList = ['Where the tall buildings are', 'Many new tall buildings are residential towers, which means some people actually live downtown now', 'Noteable Resident: Claire Gatenby'];
+downtown.factsList = ['Where the tall buildings are', 'Many new tall buildings are residential towers, which means some people actually live downtown now', 'Notable Resident: Claire Gatenby'];
 neighborhoodArray.push(downtown);
 
 var capitolHill = new Neighborhood ('Capitol Hill');
@@ -186,7 +186,7 @@ capitolHill.addCharacteristic('arts', true);
 capitolHill.addCharacteristic('hipsters', true);
 capitolHill.map = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21511.287199795017!2d-122.33332167630465!3d47.62786321789353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490152857c86161%3A0xef487dc6bbc25185!2sCapitol+Hill%2C+Seattle%2C+WA!5e0!3m2!1sen!2sus!4v1459890163504';
 capitolHill.blurb = '"This place is getting ruined by new transplants," say last year\'s crop of transplants';
-capitolHill.factsList = ['The most densely populated area in Seattle', 'Known as the home for Seattle\'s gay and lesbian population, or Seatte\'s "gayborhood"', 'Notable Resident: Chris Perez'];
+capitolHill.factsList = ['The most densely populated area in Seattle', 'Known as the home for Seattle\'s gay and lesbian population, or Seattle\'s "gayborhood"', 'Notable Resident: Chris Perez'];
 capitolHill.pageLink = 'capitolHill';
 neighborhoodArray.push(capitolHill);
 
