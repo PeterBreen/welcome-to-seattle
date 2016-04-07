@@ -1,14 +1,16 @@
 html, body {
   font-size: 16px;
   font-family: 'Fira Sans', sans-serif;
+  height: 100%;
 }
 header {
   display: block;
   width: 100%;
 }
-.subpage{
+.subpage {
   width: 100%;
-  height: 700px;
+  min-height: 43.75rem;
+  height: 100%;
   background-image: url(../images/header_img2.jpg);
   max-width: 1980px;
   background-attachment: fixed;
@@ -59,9 +61,6 @@ nav ul li:hover > ul {
 
 nav a {
   color: #fff;
-  text-decoration: none;
-}
-nav a:hover {
   text-decoration: none;
 }
 .hpsection{
@@ -145,13 +144,21 @@ legend {
 fieldset {
   border: none;
 }
-footer{
+.wrapper {
+	min-height: 100%;
+	height: 100%;
+	margin-bottom: -1.1875rem; /* the bottom margin is the negative value of the footer's height */
+}
+footer, .push {
+  height: 1.1875rem;
+}
+footer {
   width: 100%;
   background-color: #000;
   color: white;
   text-align: center;
-  margin-top: 10px;
-  font-size: 12px;
+  margin-top: 0.625rem;
+  font-size: 0.75rem;
   opacity: 0.8;
 }
 
@@ -185,16 +192,16 @@ footer{
   color: rgb(155,161,162);
 }
 
-li a {
+li a, footer a {
   color: white;
   text-decoration: none;
 }
 
-li a:hover {
+li a:hover, footer a:hover {
     color: rgb(105,190,40);
 }
 
-.main li {
+.main li a {
   font-size: 1.5rem;
 }
 
