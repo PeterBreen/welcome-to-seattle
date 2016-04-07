@@ -36,7 +36,7 @@ ballard.map = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42981.60533
 ballard.blurb = 'Once you come here you can\'t leave, because no roads lead out of Ballard. Also, Scandinavian pride!';
 ballard.pageLink = 'ballard';
 ballard.photo = 'images/ballard.jpg';
-ballard.factsList = ['The Hiram Chittendon Locks from Puget Sound to Lake Union', 'Scandanavian people and festival', 'Notable Residents: Danny Stineback and Matt Wilson'];
+ballard.factsList = ['Has the Hiram Chittendon Locks which connect the Puget Sound to Lake Union', 'Known for Scandanavian people and festival', 'Notable Residents: Danny Stineback and Matt Wilson'];
 neighborhoodArray.push(ballard);
 
 var beaconHill = new Neighborhood ('Beacon Hill');
@@ -196,7 +196,7 @@ northgate.addCharacteristic('arts', false);
 northgate.addCharacteristic('hipsters', false);
 northgate.map = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42956.08300560333!2d-122.35909688290492!3d47.7085902729062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549013fdf9b04609%3A0x6e358615536e06a2!2sNorthgate%2C+Seattle%2C+WA!5e0!3m2!1sen!2sus!4v1459889979594';
 northgate.blurb = 'Northgate is Seattle\'s shield against the danger of Shoreline. Haha sorry actually it\'s just a boring place with a really good bus route to downtown.';
-northgate.factsList = ['There\'s a mall.', 'North Seattle College', 'On the south end of Thornton Creek'];
+northgate.factsList = ['There\'s a mall.', 'North Seattle College is here (What, haven\'t heard of it.)', 'On the south end of Thornton Creek'];
 northgate.photo = 'images/northgate.jpg';
 northgate.pageLink = 'northgate';
 neighborhoodArray.push(northgate);
@@ -214,7 +214,7 @@ queenAnne.addCharacteristic('arts', false);
 queenAnne.addCharacteristic('hipsters', false);
 queenAnne.map = 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d43012.004286089155!2d-122.3887881!3d47.6407033!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490156ba01b4e4b%3A0xde5bdfe9498e9df5!2sQueen+Anne%2C+Seattle%2C+WA!5e0!3m2!1sen!2sus!4v1459890062326';
 queenAnne.blurb = 'Queen Anne is where you go to have the best quads in the entire city. CLIMB THAT HILL, CITIZEN.';
-queenAnne.factsList = ['Sits on the highest named hill in Seattle', 'Populated by mostly unmarried young adults', 'Frasier lived in Queen Anne'];
+queenAnne.factsList = ['Sits on the highest named hill in Seattle', 'Populated by mostly unmarried young adults', 'Frasier (noted T.V. psychiatrist) lived in Queen Anne'];
 queenAnne.photo = 'images/queenanne.jpg';
 queenAnne.pageLink = 'queenAnne';
 neighborhoodArray.push(queenAnne);
