@@ -1,10 +1,10 @@
 #Welcome To Seattle
 
 ###Team "Are We There Yet?"  
-  - Aliza Pilisuk   
-  - Jonathan Stern   
-  - Matthew Wilson
-  - Peter Breen  
+  - Aliza Pilisuk, @alizap89  
+  - Jonathan Stern, @JonStern1  
+  - Matthew Wilson, @matthewallanwilson  
+  - Peter Breen, @peterbreen  
 
 **Project Concept**: A site that helps Seattle newcomers choose a neighborhood that meets their needs!  
 
@@ -12,7 +12,21 @@
 
 ### Image Attribution
 
-Team AWTY thanks the following for the use of their images in our project.
+Team AWTY thanks the following Flickr users for the use of their images in our project.  
+  - https://www.flickr.com/photos/martcatnoc/13184498925/
+  - https://www.flickr.com/photos/ivanmeljac/5196114890/
+  - https://www.flickr.com/photos/sdot_photos/13086741513/
+  - https://www.flickr.com/photos/taylar/8837485788/
+  - https://www.flickr.com/photos/haroldhollingsworth/5658334734/
+  - https://www.flickr.com/photos/robinj/12170993853/
+  - https://www.flickr.com/photos/lavid/7625097116/
+  - https://www.flickr.com/photos/chasbot/4679975771/
+  - https://www.flickr.com/photos/cronncc/3847273412/
+  - https://www.flickr.com/photos/wonderlane/5167493532/
+  - https://www.flickr.com/photos/sdot_photos/10042294734/
+  - https://www.flickr.com/photos/plainurban/5610666021/
+  - https://www.flickr.com/photos/primatage/4827798865/
+  - https://www.flickr.com/photos/seattlemunicipalarchives/3093351584/
 
 ### User Stories
 
