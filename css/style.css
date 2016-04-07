@@ -198,6 +198,14 @@ li a:hover {
   font-size: 1.5rem;
 }
 
+.questionCSS{
+  display: block;
+}
+.answerCSS {
+  display: inline-block;
+  margin: 10px;
+}
+
 @media screen and (min-width: 768px) {
   .welcome-text {
     width: 30rem;
