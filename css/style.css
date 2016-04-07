@@ -152,9 +152,6 @@ fieldset {
 	height: 100%;
 	margin-bottom: -1.1875rem; /* the bottom margin is the negative value of the footer's height */
 }
-.neighborhood-page .wrapper {
-  min
-}
 footer, .push {
   height: 1.1875rem;
 }
@@ -163,8 +160,8 @@ footer {
   background-color: #000;
   color: white;
   text-align: center;
-  margin-top: 10px;
-  font-size: 12px;
+  margin-top: 0.625rem;
+  font-size: 0.75rem;
   opacity: 0.8;
 }
 
