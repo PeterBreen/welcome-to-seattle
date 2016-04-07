@@ -208,7 +208,22 @@ li a:hover, footer a:hover {
 .main li a {
   font-size: 1.5rem;
 }
-
+.comments {
+  margin-left: 2rem;
+}
+.comments p {
+  margin: 0;
+}
+.comments p:nth-of-type(even){
+  margin-bottom: 0.75rem;
+  margin-left: 1rem;
+}
+.comments p:nth-of-type(odd) {
+  font-style: italic;
+}
+.neighborhood-form {
+margin-top: 2rem;
+}
 .questionCSS{
   display: block;
 }

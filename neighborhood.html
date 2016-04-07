@@ -8,45 +8,44 @@
 </head>
 <body class="subpage neighborhood-page">
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li>
-          <a href="places.html">Places</a>
-            <ul>
-              <li><a href="neighborhood.html?id=ballard">Ballard</a></li>
-              <li><a href="neighborhood.html?id=beaconHill">Beacon Hill</a></li>
-              <li><a href="neighborhood.html?id=capitolHill">Capitol Hill</a></li>
-              <li><a href="neighborhood.html?id=centralDistrict">Central District</a></li>
-              <li><a href="neighborhood.html?id=delridge">Delridge</a></li>
-              <li><a href="neighborhood.html?id=downtown">Downtown</a></li>
-              <li><a href="neighborhood.html?id=fremont">Fremont</a></li>
-              <li><a href="neighborhood.html?id=georgetown">Georgetown</a></li>
-              <li><a href="neighborhood.html?id=magnolia">Magnolia</a></li>
-              <li><a href="neighborhood.html?id=northgate">Northgate</a></li>
-              <li><a href="neighborhood.html?id=queenAnne">Queen Anne</a></li>
-              <li><a href="neighborhood.html?id=rainier">Rainier</a></li>
-              <li><a href="neighborhood.html?id=southLakeUnion">South Lake Union</a></li>
-              <li><a href="neighborhood.html?id=universityDistrict">University District</a></li>
-              <li><a href="neighborhood.html?id=wedgwood">Wedgwood</a></li>
-              <li><a href="neighborhood.html?id=westSeattle">West Seattle</a></li>
-            </ul>
-          </li>
-        <li><a href="helpmechoose.html">Help Me Pick</a></li>
-        <li><a href="about.html">About Us</a></li>
-      </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a href="places.html">Places</a>
+          <ul>
+            <li><a href="neighborhood.html?id=ballard">Ballard</a></li>
+            <li><a href="neighborhood.html?id=beaconHill">Beacon Hill</a></li>
+            <li><a href="neighborhood.html?id=capitolHill">Capitol Hill</a></li>
+            <li><a href="neighborhood.html?id=centralDistrict">Central District</a></li>
+            <li><a href="neighborhood.html?id=delridge">Delridge</a></li>
+            <li><a href="neighborhood.html?id=downtown">Downtown</a></li>
+            <li><a href="neighborhood.html?id=fremont">Fremont</a></li>
+            <li><a href="neighborhood.html?id=georgetown">Georgetown</a></li>
+            <li><a href="neighborhood.html?id=magnolia">Magnolia</a></li>
+            <li><a href="neighborhood.html?id=northgate">Northgate</a></li>
+            <li><a href="neighborhood.html?id=queenAnne">Queen Anne</a></li>
+            <li><a href="neighborhood.html?id=rainier">Rainier</a></li>
+            <li><a href="neighborhood.html?id=southLakeUnion">South Lake Union</a></li>
+            <li><a href="neighborhood.html?id=universityDistrict">University District</a></li>
+            <li><a href="neighborhood.html?id=wedgwood">Wedgwood</a></li>
+            <li><a href="neighborhood.html?id=westSeattle">West Seattle</a></li>
+          </ul>
+        </li>
+      <li><a href="helpmechoose.html">Help Me Pick</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </nav>
   </header>
 
-  <div class="main">
+  <div class="main neighborhood-page">
     <div class="wrapper">
 
     <section class="neighborhood-name" id="neighborhood-name"></section>
     <section class="info-box" id="info-box"></section>
     <div class="google-map" id="google-map"></div>
-    <section class="comments" id="comments"></section>
 
-    <section>
+    <section class="neighborhood-form">
       <form id="neighborhood-comment-form">
         <fieldset>
           <legend>Let us know what you think of this neighborhood!</legend>
@@ -54,10 +53,12 @@
           <input name="nameofuser" type="text">
           <label name="comment">Comment: </label>
           <input name="comment" type="text">
-          <button type="submit">Enter</button>
+          <button type="submit">Submit</button>
         </fieldset>
       </form>
     </section>
+    <section class="comments" id="comments"></section>
+
     <form id="help-me-choose-form"></form>
 
       <div class="push"></div>
