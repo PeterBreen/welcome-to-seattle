@@ -317,9 +317,48 @@ transitQuestion.question = 'Do you need public transit?';
 transitQuestion.name = 'transitQuestion';
 questionArray.push(transitQuestion);
 
+var parksQuestion = new Question ();
+parksQuestion.question = 'Do you need to be close to a park?';
+parksQuestion.name = 'parksQuestion';
+questionArray.push(parksQuestion);
+
+var singleFamilyHousingQuestion = new Question ();
+singleFamilyHousingQuestion.question = 'Is it important to have single family housing in your neighborhood?';
+singleFamilyHousingQuestion.name = 'singleFamilyHousingQuestion';
+questionArray.push(singleFamilyHousingQuestion);
+
+var rentableAptQuestion = new Question ();
+rentableAptQuestion.question = 'Do you want to be in a neighborhood with mostly apartments?';
+rentableAptQuestion.name = 'rentableAptQuestion';
+questionArray.push(rentableAptQuestion);
+
+var walkabilityQuestion = new Question ();
+walkabilityQuestion.question = 'Do you need to be able to walk to a main shopping district?';
+walkabilityQuestion.name = 'walkabilityQuestion';
+questionArray.push(walkabilityQuestion);
+
+var urbanQuestion = new Question ();
+urbanQuestion.question = 'Do you want to live in a more crowded urban environment?';
+urbanQuestion.name = 'urbanQuestion';
+questionArray.push(urbanQuestion);
+
+var restaurantQuestion = new Question ();
+restaurantQuestion.question = 'Is it important for you to have good restaurants in the neighborhood?';
+restaurantQuestion.name = 'restaurantQuestion';
+questionArray.push(restaurantQuestion);
+
+var artsQuestion = new Question ();
+artsQuestion.question = 'Do you enjoy having a lively arts scene in your neighborhood?';
+artsQuestion.name = 'artsQuestion';
+questionArray.push(artsQuestion);
+
+var hipsterQuestion = new Question ();
+hipsterQuestion.question = 'Do you like hipsters?';
+hipsterQuestion.name = 'hipsterQuestion';
+questionArray.push(hipsterQuestion);
+
 for (var i = 0; i < questionArray.length; i++){
   var aquestion = document.createElement('label');
-  //aquestion.name = ;
   var input1 = document.createElement('input');
   input1.type = 'radio';
   input1.value = 'true';
@@ -334,9 +373,6 @@ for (var i = 0; i < questionArray.length; i++){
   document.getElementById('question-space').appendChild(aquestion);
   document.getElementById('question-space').appendChild(input1);
   document.getElementById('question-space').appendChild(input2);
-
-  // var nightLifeQuestion = event.target.nightlifequestion.value;
-  // createUserArray('nightLife', nightLifeQuestion);
 }
 
 function scoreAssignment(neighborhood){
@@ -377,40 +413,14 @@ function sortResults(){
 
 function processUserAnswers(event){
   event.preventDefault();
+  console.log(event.target);
 
-
-
-  var nightLifeQuestionHere = event.target.nightLifeQuestion.value;
-  //console.log('nightlife: ', event.target.nightlifequestion.value);
-  createUserArray('nightLife', nightLifeQuestionHere);
-  var transitQuestionHere = event.target.transitQuestion.value;
-  // //console.log('transit: ', event.target.transitquestion.value);
-  createUserArray('transitAccess', transitQuestionHere);
-  // var parksQuestion = event.target.parksquestion.value;
-  // //console.log('parks: ', event.target.parksquestion.value);
-  // createUserArray('parks', parksQuestion);
-  // var singleFamilyHousingQuestion = event.target.singlefamilyhousingquestion.value;
-  // //console.log('single family housing question: ', event.target.singlefamilyhousingquestion.value);
-  // createUserArray('singleFamily', singleFamilyHousingQuestion);
-  // var rentableAptQuestion = event.target.rentableaptquestion.value;
-  // //console.log('rentable apartment question: ', event.target.rentableaptquestion.value);
-  // createUserArray('rentApt', rentableAptQuestion);
-  // var walkabilityQuestion = event.target.walkabilityquestion.value;
-  // //console.log('walkability question: ', event.target.walkabilityquestion.value);
-  // createUserArray('walkability', walkabilityQuestion);
-  // var urbanQuestion = event.target.urbanquestion.value;
-  // //console.log('urbanquestion: ', event.target.urbanquestion.value);
-  // createUserArray('urban', urbanQuestion);
-  // var restaurantQuestion = event.target.restaurantquestion.value;
-  // //console.log('restaurant: ', event.target.restaurantquestion.value);
-  // createUserArray('restaurant', restaurantQuestion);
-  // var artsQuestion = event.target.artsquestion.value;
-  // //console.log('artsQuestion: ', event.target.artsquestion.value);
-  // createUserArray('arts', artsQuestion);
-  // var hipsterQuestion = event.target.hipsterquestion.value;
-  // //console.log('hipsterquestion: ', event.target.hipsterquestion.value);
-  // createUserArray('hipster', hipsterQuestion);
-
+  for (var i = 0; i < questionArray.length; i++) {
+    var questionName = questionArray[i].name;
+    var userAnswer = event.target[questionName].value;
+    console.log(userAnswer);
+    createUserArray(questionName, userAnswer);
+  }
   assignNeighborhoodScores();
   sortResults();
   appendResultList();
@@ -526,8 +536,8 @@ var getUserAnswers = document.getElementById('help-me-choose-form');
 getUserAnswers.addEventListener('submit', processUserAnswers);
 
 //EVENT LISTENER FOR COMMENTS
-var commentForm = document.getElementById('neighborhood-comment-form');
-commentForm.addEventListener('submit', processComment);
+// var commentForm = document.getElementById('neighborhood-comment-form');
+// commentForm.addEventListener('submit', processComment);
 
 function processComment(event){
   event.preventDefault();
