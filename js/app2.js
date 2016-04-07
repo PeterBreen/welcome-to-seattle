@@ -82,6 +82,10 @@ function scoreAssignment(neighborhood){
   }
 }
 
+function removeForm(){
+  document.getElementById('form-selection').style.display = 'none';
+}
+
 function assignNeighborhoodScores(){
   for(var i = 0; i < neighborhoodArray.length; i++){
     scoreAssignment(neighborhoodArray[i]);
@@ -122,6 +126,7 @@ function processUserAnswers(event){
   }
   assignNeighborhoodScores();
   sortResults();
+  removeForm();
   appendResultList();
 }
 //CREATE RANKED LIST AFTER FORM RESULTS
