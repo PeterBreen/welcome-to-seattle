@@ -10,6 +10,7 @@ function Neighborhood (name) {
   this.score = 0;
   this.pageLink = '';
   this.factsList = [];
+  this.photo = '';
 }
 
 Neighborhood.prototype.addCharacteristic = function(characteristic, value) {
@@ -69,6 +70,7 @@ wedgwood.map = 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21489.24984
 wedgwood.blurb = 'Wedgwood has a Top Pot. And some houses. Well, that\'s it.';
 wedgwood.factsList = ['Commonly misspelled as "Wedgewood"', 'Wedgwood rock - 19 foot boulder on 28th Avenue NE and NE 72nd Street', 'Notable Residents: Jonathan Stern, Drew Ferris, and Aliza Pilisuk'];
 wedgwood.pageLink = 'wedgwood';
+wedgwood.photo = 'images/wedgwood.jpg';
 neighborhoodArray.push(wedgwood);
 
 var universityDistrict = new Neighborhood ('University District');
@@ -154,6 +156,7 @@ southLakeUnion.map = 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10755
 southLakeUnion.blurb = 'Watch out for "Amazombies" who are ruining the neighborhood ... which used to be a pile of condemned warehouses.';
 southLakeUnion.factsList = ['The new tech center of Seattle', 'Has a streetcar that goes downtown. Transit name is "SLUT"', 'Notable Developer: Paul Allen (Vulcan - is he?)'];
 southLakeUnion.pageLink = 'southLakeUnion';
+southLakeUnion.photo = 'images/southlakeunion.jpg';
 neighborhoodArray.push(southLakeUnion);
 
 var downtown = new Neighborhood ('Downtown');
@@ -222,6 +225,7 @@ westSeattle.map = 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d43078.83
 westSeattle.blurb = 'And you thought Ballard was hard to get in and out of. Most West Seattle residents would be prefectly fine with WS magically turning into an island, because then you can\'t go there.';
 westSeattle.factsList = ['Original location of downtown Seattle, but the bay was too shallow', 'Has Alki Beach, a little bit of Southern California except for the rain', 'Notable Residents: Ivar Haglund, Eddie Vedder'];
 westSeattle.pageLink = 'westSeattle';
+westSeattle.photo = 'images/westseattle.jpg';
 neighborhoodArray.push(westSeattle);
 
 var delridge = new Neighborhood ('Delridge');
@@ -346,6 +350,10 @@ function displayNeighborhood(neighborhood){
   document.getElementById('info-box').appendChild(blurbContent);
 
   currentNeighborhood = neighborhood.pageLink;
+
+  var neighborhoodPhoto = document.createElement('img');
+  neighborhoodPhoto.setAttribute('src', neighborhood.photo);
+  document.getElementById('info-box').appendChild(neighborhoodPhoto);
 
   var factsContent = document.createElement('ul');
   document.getElementById('info-box').appendChild(factsContent);
