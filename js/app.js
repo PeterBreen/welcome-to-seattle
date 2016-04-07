@@ -254,7 +254,7 @@ georgetown.addCharacteristic('arts', true);
 georgetown.addCharacteristic('hipsters', true);
 georgetown.map = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43094.880446457166!2d-122.35209893442145!3d47.53995867002443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490418d0563a897%3A0xae40817516315950!2sGeorgetown%2C+Seattle%2C+WA!5e0!3m2!1sen!2sus!4v1459890281392';
 georgetown.blurb = 'Do you like airplanes, repurposed old brick buildings, and breweries? Have I got the place for you!';
-georgetown.factsList = ['Right by Boeing Field', 'Known for Georgetown Brewery and Manny\'s Pale Ale', 'Notable person who has drinken beer in Georgetown: Peter'];
+georgetown.factsList = ['Right by Boeing Field', 'Known for Georgetown Brewery and Manny\'s Pale Ale', 'Notable person who has had a drink in Georgetown: Peter'];
 georgetown.pageLink = 'georgetown';
 neighborhoodArray.push(georgetown);
 
