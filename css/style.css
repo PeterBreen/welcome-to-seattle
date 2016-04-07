@@ -168,9 +168,13 @@ footer {
   font-size: 18px;
 }
 
-.bio img{
+.bio img {
   border: 4px solid white;
   margin-bottom: 35px;
+}
+.neighborhood-page img {
+  border: 4px solid white;
+  margin: 1rem 0 0 0;
 }
 
 .bioInfoBox{
