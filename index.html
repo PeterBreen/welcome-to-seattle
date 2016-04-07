@@ -5,12 +5,32 @@
   <link href='https://fonts.googleapis.com/css?family=Fira+Sans' rel='stylesheet' type='text/css'>
   <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body class="homepage">
   <header>
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="places.html">Places</a></li>
+      <li>
+        <a href="places.html">Places</a>
+          <ul>
+            <li><a href="neighborhood.html?id=ballard">Ballard</a></li>
+            <li><a href="neighborhood.html?id=fremont">Fremont, Phinney Ridge, Wallingford, and Green Lake</a></li>
+            <li><a href="neighborhood.html?id=wedgwood">Wedgwood, View Ridge, Ravenna, Bryant, and Laurelhurst</a></li>
+            <li><a href="neighborhood.html?id=universityDistrict">University District</a></li>
+            <li><a href="neighborhood.html?id=northgate">Far North Seattle</a></li>
+            <li><a href="neighborhood.html?id=magnolia">Magnolia</a></li>
+            <li><a href="neighborhood.html?id=queenAnne">Queen Anne</a></li>
+            <li><a href="neighborhood.html?id=southLakeUnion">South Lake Union</a></li>
+            <li><a href="neighborhood.html?id=downtown">Downtown</a></li>
+            <li><a href="neighborhood.html?id=capitolHill">Capitol Hill</a></li>
+            <li><a href="neighborhood.html?id=centralDistrict">Central District</a></li>
+            <li><a href="neighborhood.html?id=westSeattle">West Seattle</a></li>
+            <li><a href="neighborhood.html?id=queenAnne">Queen Anne</a></li>
+            <li><a href="neighborhood.html?id=delridge">Delridge</a></li>
+            <li><a href="neighborhood.html?id=beaconHill">Beacon Hill</a></li>
+            <li><a href="neighborhood.html?id=rainier">Rainier - Seward Park</a></li>
+          </ul>
+        </li>
       <li><a href="helpmechoose.html">Help Me Pick</a></li>
       <li><a href="about.html">About Us</a></li>
     </ul>
@@ -18,17 +38,16 @@
   </header>
 
 
-  <section class="header">
-    <div class="positioning-header">
+  <section class="hpsection">
+    <!-- <div class="positioning-header"> -->
     <div class="welcome-text">
       <h1>Welcome to Seattle</h1>
       <p>New to the area?  Take our short survey to find out which neighborhoods meet your needs.</p>
-      <button a href="helpmechoose.html">Get Started</button>
-      <p>Want to browse a list of neighborhoods instead? <a href="places.html">Go for it.</a></p>
-  </div>
-</div>
-</section>
-  <section class="need-form"></section>
-  <footer></footer>
+      <a class="get-started" href="helpmechoose.html">Get Started</a>
+      <p>Or <a class="places-link" href="places.html"> browse a list of neighborhoods</a> instead.</p>
+  <!-- </div> -->
+    </div>
+  </section>
+  <footer>Copyright &copy; 2016 <a href="about.html">AreWeThereYet?</a></footer>
 </body>
 </html>

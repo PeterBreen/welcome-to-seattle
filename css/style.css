@@ -6,17 +6,30 @@ header {
   display: block;
   width: 100%;
 }
-
-body {
+.subpage{
   width: 100%;
-  display: block;
+  height: 700px;
+  background-image: url(../images/header_img2.jpg);
+  max-width: 1980px;
+  background-attachment: fixed;
+  display: relative;
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
 }
+
 header {
   width: 100%;
   background-color: #000;
 }
+
 nav {
 padding: 0.1rem 0;
+margin-bottom: 50px;
+}
+
+.homepage nav{
+  margin-bottom: 100px;
 }
 nav ul {
 padding: 0;
@@ -29,35 +42,121 @@ nav li {
   display: inline;
   padding-right: 1rem;
 }
-nav a, .welcome-text a {
+nav ul ul {
+	display: none;
+}
+
+nav ul li:hover > ul {
+		display: block;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    padding-left: 10px;
+    z-index: 1;
+    background-color: black;
+	}
+
+nav a {
   color: #fff;
   text-decoration: none;
 }
-nav a:hover, .welcome-text a:hover {
+nav a:hover {
   text-decoration: underline;
 }
-.header {
+.hpsection{
+  margin-bottom: 120px;
+}
+.main {
+  max-width:60rem;
+  margin: 0 auto;
+  background-color: black;
+  opacity: 0.8;
+  color: white;
+  padding: 1rem;
+}
+.main h1{
+  margin-top: 0;
+}
+.homepage {
 background-image: url(../images/header_img1.jpg);
-height: 700px;
+height: 100%
 max-width: 1980px;
+background-attachment: fixed;
+/*display: relative;*/
 background-position: center;
 background-size: cover;
-display: relative;
 margin: 0 auto;
 }
 .positioning-header {
   padding-top: 5rem;
 }
 .welcome-text {
-  width: 30rem;
+  width: 24rem;
   margin: 0 auto;
-  padding: 2rem 5rem;
+  padding: 1rem 2rem;
   text-align: center;
   background-color: #000;
   color: #fff;
-  opacity: 0.7;
+  opacity: 0.75;
 }
 .welcome-text h1 {
   font-size: 3rem;
   line-height: 3rem;
+}
+
+.get-started {
+  padding: 0.5rem 0.7rem;
+  background-color: rgba(255, 255, 255, 1);
+  color: #000;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.get-started:hover {
+  text-decoration: underline;
+}
+
+.places-link {
+  color: #fff;
+  text-decoration: none;
+}
+.places-link:hover {
+  text-decoration: underline;
+}
+.question {
+  margin-left: 30px;
+  padding-bottom: 15px;
+  font-size: 1.1rem;
+  max-width: 60rem;
+}
+
+.answer {
+  margin-left: 30px;
+}
+
+.submit {
+margin-left: 60px;
+}
+
+legend {
+  font-size: 1.7rem;
+}
+fieldset {
+  border: none;
+}
+footer{
+  width: 100%;
+  background-color: #000;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px;
+  opacity: 0.8;
+}
+@media screen and (min-width: 768px) {
+  .welcome-text {
+    width: 30rem;
+    padding: 2rem 5rem;
+  }
 }

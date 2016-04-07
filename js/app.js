@@ -37,7 +37,7 @@ ballard.pageLink = 'ballard';
 ballard.factsList = ['The Hiram Chittendon Locks from Puget Sound to Lake Union', 'Scandanavian people and festival', 'Notable Residents: Danny Stineback and Matt Wilson'];
 neighborhoodArray.push(ballard);
 
-var fremont = new Neighborhood ('Fremont');
+var fremont = new Neighborhood ('Fremont, Phinney Ridge, Wallingford, and Green Lake');
 fremont.addCharacteristic('nightLife', true);
 fremont.addCharacteristic('transitAccess', true);
 fremont.addCharacteristic('parks', true);
@@ -54,7 +54,7 @@ fremont.pageLink = 'fremont';
 fremont.factsList = ['Summer Solstice Parade every year - famous for nude Solstice Cyclists', '"The center of the universe"', 'Notable Residents: Peter Breen, Jeff Russell, and the Fremont Troll'];
 neighborhoodArray.push(fremont);
 
-var wedgwood = new Neighborhood ('Wedgwood');
+var wedgwood = new Neighborhood ('Wedgwood, View Ridge, Ravenna, Bryant, and Laurelhurst');
 wedgwood.addCharacteristic('nightLife', false);
 wedgwood.addCharacteristic('transitAccess', false);
 wedgwood.addCharacteristic('parks', true);
@@ -88,7 +88,7 @@ universityDistrict.factsList = ['The University of Washington is located here', 
 universityDistrict.pageLink = 'universityDistrict';
 neighborhoodArray.push(universityDistrict);
 
-var northgate = new Neighborhood ('Northgate');
+var northgate = new Neighborhood ('Far North Seattle');
 northgate.addCharacteristic('nightLife', false);
 northgate.addCharacteristic('transitAccess', true);
 northgate.addCharacteristic('parks', false);
@@ -152,7 +152,7 @@ southLakeUnion.addCharacteristic('arts', false);
 southLakeUnion.addCharacteristic('hipsters', true);
 southLakeUnion.map = 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10755.872698696478!2d-122.3462894!3d47.6267499!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490153bc67a5d5b%3A0xa91e9c10a999a3be!2sSouth+Lake+Union%2C+Seattle%2C+WA!5e0!3m2!1sen!2sus!4v1459890108270';
 southLakeUnion.blurb = 'Watch out for "Amazombies" who are ruining the neighborhood ... which used to be a pile of condemned warehouses.';
-southLakeUnion.factsList = ['The new tech center of Seattle', 'Has a streetcar that goes downtown. Transit name is "SLUT"'];
+southLakeUnion.factsList = ['The new tech center of Seattle', 'Has a streetcar that goes downtown. Transit name is "SLUT"', 'Notable Developer: Paul Allen (Vulcan - is he?)'];
 southLakeUnion.pageLink = 'southLakeUnion';
 neighborhoodArray.push(southLakeUnion);
 
@@ -443,8 +443,11 @@ function displayNeighborhood(neighborhood){
 
   for (var i = 0; i < commentsArray.length; i++) {
     var userComment = document.createElement('p');
+    var inputName = document.createElement('p');
     if (commentsArray[i].neighborhood === currentNeighborhood) {
       userComment.textContent = commentsArray[i].comment;
+      inputName.textContent = commentsArray[i].username;
+      document.getElementById('comments').appendChild(inputName);
       document.getElementById('comments').appendChild(userComment);
     }
   }
@@ -461,7 +464,7 @@ function displayPlaces() {
   var resultsHeader = document.createElement('h2');
   resultsHeader.textContent = 'List of Neighborhoods';
   places.appendChild(resultsHeader);
-  var formResultsOL = document.createElement('ol');
+  var formResultsOL = document.createElement('ul');
   places.appendChild(formResultsOL);
   for (i = 0; i < neighborhoodArray.length; i++) {
     var formResultsLI = document.createElement('li');
@@ -479,7 +482,7 @@ if (placesCheck) {
   displayPlaces();
 }
 
-// //EVENT LISTENER FOR FORM PAGE
+// //EVENT LISTENER FOR FORM PAGE, MOVED TO APP2.JS
 // var getUserAnswers = document.getElementById('help-me-choose-form');
 // getUserAnswers.addEventListener('submit', processUserAnswers);
 
@@ -491,15 +494,22 @@ function processComment(event){
   event.preventDefault();
   var userComment = document.createElement('p');
   userComment.setAttribute('class', currentNeighborhood);
-  userComment.textContent = event.target.comment.value;
+  userComment.textContent = 'Comment: ' + event.target.comment.value;
   console.log(userComment);
+  var inputName = document.createElement('p');
+  inputName.setAttribute('class', currentNeighborhood);
+  inputName.textContent = 'Name: ' + event.target.nameofuser.value;
+  console.log(inputName);
+  document.getElementById('comments').appendChild(inputName);
   document.getElementById('comments').appendChild(userComment);
   var commentObject = {
     neighborhood: currentNeighborhood,
+    username: inputName.textContent,
     comment: userComment.textContent
   };
   commentsArray.push(commentObject);
   saveCommentsToLocal();
+  commentForm.reset();
 }
 
 function saveCommentsToLocal(){
@@ -512,3 +522,11 @@ function fetchCommentsFromLocal(){
     console.log('User has comments from last time.');
     commentsArray = savedComments; }
 }
+
+//EVENT LISTENER FOR FORM PAGE
+var getUserAnswers = document.getElementById('help-me-choose-form');
+getUserAnswers.addEventListener('submit', processUserAnswers);
+
+//EVENT LISTENER FOR COMMENTS
+var commentForm = document.getElementById('neighborhood-comment-form');
+commentForm.addEventListener('submit', processComment);
