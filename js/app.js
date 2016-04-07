@@ -196,7 +196,7 @@ northgate.addCharacteristic('arts', false);
 northgate.addCharacteristic('hipsters', false);
 northgate.map = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42956.08300560333!2d-122.35909688290492!3d47.7085902729062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549013fdf9b04609%3A0x6e358615536e06a2!2sNorthgate%2C+Seattle%2C+WA!5e0!3m2!1sen!2sus!4v1459889979594';
 northgate.blurb = 'Northgate is Seattle\'s shield against the danger of Shoreline. Haha sorry actually it\'s just a boring place with a really good bus route to downtown.';
-northgate.factsList = ['There\'s a mall.', 'North Seattle College is here (What, haven\'t heard of it.)', 'On the south end of Thornton Creek'];
+northgate.factsList = ['There\'s a mall.', 'North Seattle College is here (What, haven\'t heard of it?)', 'On the south end of Thornton Creek'];
 northgate.photo = 'images/northgate.jpg';
 northgate.pageLink = 'northgate';
 neighborhoodArray.push(northgate);
