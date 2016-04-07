@@ -10,6 +10,7 @@ function Neighborhood (name) {
   this.score = 0;
   this.pageLink = '';
   this.factsList = [];
+  this.photo = '';
 }
 
 Neighborhood.prototype.addCharacteristic = function(characteristic, value) {
@@ -69,6 +70,7 @@ wedgwood.map = 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21489.24984
 wedgwood.blurb = 'Wedgwood has a Top Pot. And some houses. Well, that\'s it.';
 wedgwood.factsList = ['Commonly misspelled as "Wedgewood"', 'Wedgwood rock - 19 foot boulder on 28th Avenue NE and NE 72nd Street', 'Notable Residents: Jonathan Stern, Drew Ferris, and Aliza Pilisuk'];
 wedgwood.pageLink = 'wedgwood';
+wedgwood.photo = 'images/wedgwood.jpg';
 neighborhoodArray.push(wedgwood);
 
 var universityDistrict = new Neighborhood ('University District');
@@ -84,7 +86,7 @@ universityDistrict.addCharacteristic('arts', false);
 universityDistrict.addCharacteristic('hipsters', false);
 universityDistrict.map = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21497.699773564327!2d-122.3218460762309!3d47.660868668035604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490148c0b84130f%3A0x4d2cfb91a6c76626!2sUniversity+District%2C+Seattle%2C+WA!5e0!3m2!1sen!2sus!4v1459889900124';
 universityDistrict.blurb = 'The U-District has a million restaraunts and only two are good. Also a university, which means undergrads, which means loud parties and broken beer bottles.';
-universityDistrict.factsList = ['The University of Washington is located here', 'University Ave is commonly known as "the ave"', 'Noteable Resident: Rashid Baset'];
+universityDistrict.factsList = ['The University of Washington is located here', 'University Ave is commonly known as "the ave"', 'Notable Resident: Rashid Baset'];
 universityDistrict.pageLink = 'universityDistrict';
 neighborhoodArray.push(universityDistrict);
 
@@ -154,6 +156,7 @@ southLakeUnion.map = 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10755
 southLakeUnion.blurb = 'Watch out for "Amazombies" who are ruining the neighborhood ... which used to be a pile of condemned warehouses.';
 southLakeUnion.factsList = ['The new tech center of Seattle', 'Has a streetcar that goes downtown. Transit name is "SLUT"', 'Notable Developer: Paul Allen (Vulcan - is he?)'];
 southLakeUnion.pageLink = 'southLakeUnion';
+southLakeUnion.photo = 'images/southlakeunion.jpg';
 neighborhoodArray.push(southLakeUnion);
 
 var downtown = new Neighborhood ('Downtown');
@@ -170,7 +173,7 @@ downtown.addCharacteristic('hipsters', false);
 downtown.map = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43041.078709006615!2d-122.37055658383359!3d47.60537872112048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906ab6b122572d%3A0x4cc65f51348e1d43!2sDowntown%2C+Seattle%2C+WA!5e0!3m2!1sen!2sus!4v1459890138313';
 downtown.blurb = 'Hello? Does anyone live here? I\'m stuck in the Chipotle on 3rd, send help...';
 downtown.pageLink = 'downtown';
-downtown.factsList = ['Where the tall buildings are', 'Many new tall buildings are residential towers, which means some people actually live downtown now', 'Noteable Resident: Claire Gatenby'];
+downtown.factsList = ['Where the tall buildings are', 'Many new tall buildings are residential towers, which means some people actually live downtown now', 'Notable Resident: Claire Gatenby'];
 neighborhoodArray.push(downtown);
 
 var capitolHill = new Neighborhood ('Capitol Hill');
@@ -186,7 +189,7 @@ capitolHill.addCharacteristic('arts', true);
 capitolHill.addCharacteristic('hipsters', true);
 capitolHill.map = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21511.287199795017!2d-122.33332167630465!3d47.62786321789353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490152857c86161%3A0xef487dc6bbc25185!2sCapitol+Hill%2C+Seattle%2C+WA!5e0!3m2!1sen!2sus!4v1459890163504';
 capitolHill.blurb = '"This place is getting ruined by new transplants," say last year\'s crop of transplants';
-capitolHill.factsList = ['The most densely populated area in Seattle', 'Known as the home for Seattle\'s gay and lesbian population, or Seatte\'s "gayborhood"', 'Notable Resident: Chris Perez'];
+capitolHill.factsList = ['The most densely populated area in Seattle', 'Known as the home for Seattle\'s gay and lesbian population, or Seattle\'s "gayborhood"', 'Notable Resident: Chris Perez'];
 capitolHill.pageLink = 'capitolHill';
 neighborhoodArray.push(capitolHill);
 
@@ -222,6 +225,7 @@ westSeattle.map = 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d43078.83
 westSeattle.blurb = 'And you thought Ballard was hard to get in and out of. Most West Seattle residents would be prefectly fine with WS magically turning into an island, because then you can\'t go there.';
 westSeattle.factsList = ['Original location of downtown Seattle, but the bay was too shallow', 'Has Alki Beach, a little bit of Southern California except for the rain', 'Notable Residents: Ivar Haglund, Eddie Vedder'];
 westSeattle.pageLink = 'westSeattle';
+westSeattle.photo = 'images/westseattle.jpg';
 neighborhoodArray.push(westSeattle);
 
 var delridge = new Neighborhood ('Delridge');
@@ -254,7 +258,7 @@ georgetown.addCharacteristic('arts', true);
 georgetown.addCharacteristic('hipsters', true);
 georgetown.map = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43094.880446457166!2d-122.35209893442145!3d47.53995867002443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490418d0563a897%3A0xae40817516315950!2sGeorgetown%2C+Seattle%2C+WA!5e0!3m2!1sen!2sus!4v1459890281392';
 georgetown.blurb = 'Do you like airplanes, repurposed old brick buildings, and breweries? Have I got the place for you!';
-georgetown.factsList = ['Right by Boeing Field', 'Known for Georgetown Brewery and Manny\'s Pale Ale', 'Notable person who has drinken beer in Georgetown: Peter'];
+georgetown.factsList = ['Right by Boeing Field', 'Known for Georgetown Brewery and Manny\'s Pale Ale', 'Notable person who has had a drink in Georgetown: Peter'];
 georgetown.pageLink = 'georgetown';
 neighborhoodArray.push(georgetown);
 
@@ -346,6 +350,10 @@ function displayNeighborhood(neighborhood){
   document.getElementById('info-box').appendChild(blurbContent);
 
   currentNeighborhood = neighborhood.pageLink;
+
+  var neighborhoodPhoto = document.createElement('img');
+  neighborhoodPhoto.setAttribute('src', neighborhood.photo);
+  document.getElementById('info-box').appendChild(neighborhoodPhoto);
 
   var factsContent = document.createElement('ul');
   document.getElementById('info-box').appendChild(factsContent);
