@@ -181,24 +181,26 @@ footer{
   margin-bottom: -15px;
 }
 
-@media screen and (min-width: 768px) {
-  .welcome-text {
-    width: 30rem;
-    padding: 2rem 5rem;
-  }
-}
-
 .places-list {
   color: rgb(155,161,162);
 }
 
 li a {
   color: white;
-  font-family: sans-serif;
-  font-size: 150%;
   text-decoration: none;
 }
 
 li a:hover {
     color: rgb(105,190,40);
+}
+
+.main li {
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .welcome-text {
+    width: 30rem;
+    padding: 2rem 5rem;
+  }
 }
