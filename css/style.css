@@ -9,7 +9,7 @@ header {
 }
 .subpage {
   width: 100%;
-  min-height: 700px;
+  min-height: 43.75rem;
   background-image: url(../images/header_img2.jpg);
   max-width: 1980px;
   background-attachment: fixed;
@@ -150,6 +150,9 @@ fieldset {
 	min-height: 100%;
 	height: 100%;
 	margin-bottom: -1.1875rem; /* the bottom margin is the negative value of the footer's height */
+}
+.neighborhood-page body {
+  min-height: 60rem;
 }
 footer, .push {
   height: 1.1875rem;
