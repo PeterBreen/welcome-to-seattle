@@ -7,9 +7,9 @@ header {
   display: block;
   width: 100%;
 }
-.subpage{
+.subpage {
   width: 100%;
-  height: 700px;
+  min-height: 700px;
   background-image: url(../images/header_img2.jpg);
   max-width: 1980px;
   background-attachment: fixed;
