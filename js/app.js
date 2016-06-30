@@ -1,4 +1,4 @@
-var neighborhoodArray = [];
+  var neighborhoodArray = [];
 var currentNeighborhood;
 var commentsArray = [];
 
