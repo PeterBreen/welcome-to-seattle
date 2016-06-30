@@ -21,6 +21,7 @@ Neighborhood.prototype.addCharacteristic = function(characteristic, value) {
   this.characteristics.push(char);
 };
 
+//turn this into JSON
 var ballard = new Neighborhood ('Ballard');
 ballard.addCharacteristic('nightLife', true);
 ballard.addCharacteristic('transitAccess', false);
@@ -340,7 +341,7 @@ function getQueryVariable(variable)
   }
 }
 
-var neighborhoodCheck = document.getElementById('neighborhood-name');
+var neighborhoodCheck = $('#neighborhood-name');
 if (neighborhoodCheck) {
   getQueryVariable('id');
 }
@@ -352,24 +353,24 @@ function displayNeighborhood(neighborhood){
 
   var title = document.createElement('h1');
   title.textContent = neighborhood.name;
-  document.getElementById('neighborhood-name').appendChild(title);
+  $('#neighborhood-name').append(title);
 
   var mapImage = document.createElement('iframe');
   mapImage.src = neighborhood.map;
-  document.getElementById('google-map').appendChild(mapImage);
+  $('#google-map').append(mapImage);
 
   var blurbContent = document.createElement('section');
   blurbContent.textContent = neighborhood.blurb;
-  document.getElementById('info-box').appendChild(blurbContent);
+  $('#info-box').append(blurbContent);
 
   currentNeighborhood = neighborhood.pageLink;
 
   var neighborhoodPhoto = document.createElement('img');
   neighborhoodPhoto.setAttribute('src', neighborhood.photo);
-  document.getElementById('info-box').appendChild(neighborhoodPhoto);
+  $('#info-box').append(neighborhoodPhoto);
 
   var factsContent = document.createElement('ul');
-  document.getElementById('info-box').appendChild(factsContent);
+  $('#info-box').append(factsContent);
 
   for (var i = 0; i < commentsArray.length; i++) {
     var userComment = document.createElement('p');
@@ -377,8 +378,8 @@ function displayNeighborhood(neighborhood){
     if (commentsArray[i].neighborhood === currentNeighborhood) {
       userComment.textContent = commentsArray[i].comment;
       inputName.textContent = commentsArray[i].username;
-      document.getElementById('comments').appendChild(inputName);
-      document.getElementById('comments').appendChild(userComment);
+      $('#comments').append(inputName);
+      $('#comments').append(userComment);
     }
   }
 
@@ -390,12 +391,12 @@ function displayNeighborhood(neighborhood){
 }
 
 function displayPlaces() {
-  var places = document.getElementById('places-list');
+  var places = $('#places-list');
   var resultsHeader = document.createElement('h2');
   resultsHeader.textContent = 'List of Neighborhoods';
-  places.appendChild(resultsHeader);
+  places.append(resultsHeader);
   var formResultsOL = document.createElement('ul');
-  places.appendChild(formResultsOL);
+  places.append(formResultsOL);
   for (i = 0; i < neighborhoodArray.length; i++) {
     var formResultsLI = document.createElement('li');
     formResultsOL.appendChild(formResultsLI);
@@ -407,14 +408,13 @@ function displayPlaces() {
 }
 
 //display page content for places.html - navigation backup page
-var placesCheck = document.getElementById('places-list');
+var placesCheck = $('#places-list');
 if (placesCheck) {
   displayPlaces();
 }
 
 //EVENT LISTENER FOR COMMENTS
-var commentForm = document.getElementById('neighborhood-comment-form');
-commentForm.addEventListener('submit', processComment);
+$('#neighborhood-comment-form').on('submit', processComment);
 
 function processComment(event){
   event.preventDefault();
@@ -426,8 +426,8 @@ function processComment(event){
   inputName.setAttribute('class', currentNeighborhood);
   inputName.textContent = 'Name: ' + event.target.nameofuser.value;
   console.log(inputName);
-  document.getElementById('comments').appendChild(inputName);
-  document.getElementById('comments').appendChild(userComment);
+  $('#comments').append(inputName);
+  $('#comments').append(userComment);
   var commentObject = {
     neighborhood: currentNeighborhood,
     username: inputName.textContent,
@@ -450,9 +450,7 @@ function fetchCommentsFromLocal(){
 }
 
 //EVENT LISTENER FOR FORM PAGE
-var getUserAnswers = document.getElementById('help-me-choose-form');
-getUserAnswers.addEventListener('submit', processUserAnswers);
+$('#help-me-choose-form').on('submit', processUserAnswers);
 
 //EVENT LISTENER FOR COMMENTS
-var commentForm = document.getElementById('neighborhood-comment-form');
-commentForm.addEventListener('submit', processComment);
+var commentForm = $('#neighborhood-comment-form').on('submit', processComment);
