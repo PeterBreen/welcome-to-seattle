@@ -6,12 +6,18 @@ var Hoods = {}
 Hoods.pullData = function () {
   if (localStorage.rawData) {
     console.log("LocalStorage present");
-    Hoods.Neighborhood(JSON.parse(localStorage.rawData));
+    var localHoodData = JSON.parse(localStorage.rawData);
+    localHoodData.forEach(function(hoodData) {
+      Hoods.Neighborhood(hoodData)
+    }, this)
   } else {
     $.getJSON("data/hoods.json", function(data) {
       Hoods.Neighborhood(data);
       var stringData = JSON.stringify(data);
       localStorage.setItem("rawData", stringData);
+      data.forEach(function(hoodData) {
+        Hoods.Neighborhood(hoodData)
+      }, this)
     })
   }
 }
