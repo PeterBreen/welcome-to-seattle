@@ -1,0 +1,27 @@
+
+html, body {
+  font-size: 16px;
+  font-family: 'Fira Sans', sans-serif;
+  height: 100%;
+}
+
+header {
+  display: block;
+  width: 100%;
+  background-color: #000;
+}
+
+nav {
+padding: 0.1rem 0;
+margin-bottom: 50px;
+}
+
+footer {
+  width: 100%;
+  background-color: #000;
+  color: white;
+  text-align: center;
+  margin-top: 0.625rem;
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
