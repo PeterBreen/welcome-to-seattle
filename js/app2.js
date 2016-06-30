@@ -77,12 +77,12 @@ for (var i = 0; i < questionArray.length; i++){
   no.textContent = 'NO';
   no.setAttribute('class', 'answerCSS');
   aquestion.textContent = questionArray[i].question;
-  document.getElementById('question-space').appendChild(aquestion);
-  document.getElementById('question-space').appendChild(yes);
-  document.getElementById('question-space').appendChild(input1);
-  document.getElementById('question-space').appendChild(no);
-  document.getElementById('question-space').appendChild(input2);
-  document.getElementById('question-space').appendChild(space);
+  $('#question-space').append(aquestion);
+  $('#question-space').append(yes);
+  $('#question-space').append(input1);
+  $('#question-space').append(no);
+  $('#question-space').append(input2);
+  $('#question-space').append(space);
 }
 
 function scoreAssignment(neighborhood){
@@ -94,7 +94,7 @@ function scoreAssignment(neighborhood){
 }
 
 function removeForm(){
-  document.getElementById('form-selection').style.display = 'none';
+  $('#form-selection').style.display = 'none';
 }
 
 function assignNeighborhoodScores(){
@@ -142,7 +142,7 @@ function processUserAnswers(event){
 }
 //CREATE RANKED LIST AFTER FORM RESULTS
 function appendResultList() {
-  var formResults = document.getElementById('form-results');
+  var formResults = $('#form-results');
   var resultsHeader = document.createElement('h2');
   resultsHeader.textContent = 'Here are the neighborhoods that meet your needs in order from best to worst:';
   formResults.appendChild(resultsHeader);
@@ -159,5 +159,4 @@ function appendResultList() {
 }
 
 //EVENT LISTENER FOR FORM PAGE
-var getUserAnswers = document.getElementById('help-me-choose-form');
-getUserAnswers.addEventListener('submit', processUserAnswers);
+$('#help-me-choose-form').on('submit', processUserAnswers);
