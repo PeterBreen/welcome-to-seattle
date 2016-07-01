@@ -2,19 +2,41 @@ var neighborhoodArray = [];
 var currentNeighborhood;
 var commentsArray = [];
 var Hoods = {}
+Hoods.all = []
 
-Hoods.pullData = function () {
+Hoods.pullData = function() {
   if (localStorage.rawData) {
     console.log("LocalStorage present");
-    Hoods.Neighborhood(JSON.parse(localStorage.rawData));
+    var localHoodData = JSON.parse(localStorage.rawData);
+    localHoodData.forEach(function(hoodData) {
+      Hoods.all.push(hoodData)
+    }, this)
   } else {
     $.getJSON("data/hoods.json", function(data) {
       Hoods.Neighborhood(data);
       var stringData = JSON.stringify(data);
       localStorage.setItem("rawData", stringData);
+      data.forEach(function(hoodData) {
+        Hoods.all.push(hoodData)
+      }, this)
     })
   }
-}
+}; Hoods.pullData() //For some dumb reason I can't seem to put this in an IFFE
+
+//places hoods on the place page
+Hoods.placeHoods = function() {
+var hoodNames = Hoods.all.map(function(a) {
+    return a.name
+  })
+  hoodNames.forEach(function(name) {
+    $('#places-list').append(name + '<br>').addClass('places-list') //trying to link the hoods but couldn't get it.
+    // var aTag = document.createElement('a');
+    // aTag.setAttribute('href', 'neighborhood.html?id=' + neighborhoodArray[i].pageLink)
+  })
+}; Hoods.placeHoods()
+
+
+
 
 Hoods.Neighborhood = function(rawData) {
   this.name = rawData.name;
