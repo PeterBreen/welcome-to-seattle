@@ -4,56 +4,67 @@ var questionArray = [];
 function Question () {
   this.question = '';
   this.name = '';
+  this.code = ''; // added code to simplify checking.
 }
 
 var nightLifeQuestion = new Question ();
 nightLifeQuestion.question = 'Is it important for you to have good nightlife in your neighborhood?';
 nightLifeQuestion.name = 'nightLifeQuestion';
+nightLifeQuestion.code = 'night';
 questionArray.push(nightLifeQuestion);
 
 var transitQuestion = new Question ();
 transitQuestion.question = 'Do you need public transit?';
 transitQuestion.name = 'transitQuestion';
+transitQuestion.code = 'transit';
 questionArray.push(transitQuestion);
 
 var parksQuestion = new Question ();
 parksQuestion.question = 'Do you need to be close to a park?';
 parksQuestion.name = 'parksQuestion';
+parksQuestion.code = 'parks';
 questionArray.push(parksQuestion);
 
 var singleFamilyHousingQuestion = new Question ();
 singleFamilyHousingQuestion.question = 'Is it important to have single family housing in your neighborhood?';
 singleFamilyHousingQuestion.name = 'singleFamilyHousingQuestion';
+singleFamilyHousingQuestion.code = 'family';
 questionArray.push(singleFamilyHousingQuestion);
 
 var rentableAptQuestion = new Question ();
 rentableAptQuestion.question = 'Do you want to be in a neighborhood with mostly apartments?';
 rentableAptQuestion.name = 'rentableAptQuestion';
+rentableAptQuestion.code = 'rent';
 questionArray.push(rentableAptQuestion);
 
 var walkabilityQuestion = new Question ();
 walkabilityQuestion.question = 'Do you need to be able to walk to a main shopping district?';
 walkabilityQuestion.name = 'walkabilityQuestion';
+walkabilityQuestion.code = 'walk';
 questionArray.push(walkabilityQuestion);
 
 var urbanQuestion = new Question ();
 urbanQuestion.question = 'Do you want to live in a more crowded urban environment?';
 urbanQuestion.name = 'urbanQuestion';
+urbanQuestion.code = 'urban';
 questionArray.push(urbanQuestion);
 
 var restaurantQuestion = new Question ();
 restaurantQuestion.question = 'Is it important for you to have good restaurants in the neighborhood?';
 restaurantQuestion.name = 'restaurantQuestion';
+restaurantQuestion.code = 'rest';
 questionArray.push(restaurantQuestion);
 
 var artsQuestion = new Question ();
 artsQuestion.question = 'Do you enjoy having a lively arts scene in your neighborhood?';
 artsQuestion.name = 'artsQuestion';
+artsQuestion.code = 'arts';
 questionArray.push(artsQuestion);
 
 var hipsterQuestion = new Question ();
 hipsterQuestion.question = 'Do you like hipsters?';
 hipsterQuestion.name = 'hipsterQuestion';
+hipsterQuestion.code = 'hips';
 questionArray.push(hipsterQuestion);
 
 for (var i = 0; i < questionArray.length; i++){
@@ -63,15 +74,15 @@ for (var i = 0; i < questionArray.length; i++){
   var input1 = document.createElement('input');
   var yes = document.createElement('p');
   input1.type = 'radio';
-  input1.value = 'true';
+  input1.value = questionArray[i].code;
   input1.name = questionArray[i].name;
-  input1.setAttribute('class', 'answerCSS');
+  input1.setAttribute('class', 'answerCSS thisQuestionCounts');
   yes.textContent = 'YES';
   yes.setAttribute('class', 'answerCSS');
   var input2 = document.createElement('input');
   var no = document.createElement('p');
   input2.type = 'radio';
-  input2.value = 'false';
+  // input2.value = 'false'; // REMOVED. No longer relevant
   input2.name = questionArray[i].name;
   input2.setAttribute('class', 'answerCSS');
   no.textContent = 'NO';
@@ -85,34 +96,36 @@ for (var i = 0; i < questionArray.length; i++){
   $('#question-space').append(space);
 }
 
-function scoreAssignment(neighborhood){
-  for (var i = 0; i < userInputArray.length; i++){
-    if (destringify(userInputArray[i].value) === neighborhood.characteristics[i].value){
-      neighborhood.score++;
-    }
-  }
-}
+// function scoreAssignment(neighborhood){
+//   for (var i = 0; i < userInputArray.length; i++){
+//     if (destringify(userInputArray[i].value) === neighborhood.characteristics[i].value){
+//       neighborhood.score++;
+//     }
+//   }
+// }
 
 function removeForm(){
   $('#form-selection').style.display = 'none';
 }
 
-function assignNeighborhoodScores(){
-  for(var i = 0; i < neighborhoodArray.length; i++){
-    scoreAssignment(neighborhoodArray[i]);
-    console.log(neighborhoodArray[i]);
-  }
-}
+//Don't think needed.
 
-function destringify(string){
-  if(string === 'true'){
-    string = true;
-  }
-  else if(string === 'false'){
-    string = false;
-  }
-  return string;
-}
+// function assignNeighborhoodScores(){
+//   for(var i = 0; i < neighborhoodArray.length; i++){
+//     scoreAssignment(neighborhoodArray[i]);
+//     console.log(neighborhoodArray[i]);
+//   }
+// }
+
+// function destringify(string){
+//   if(string === 'true'){
+//     string = true;
+//   }
+//   else if(string === 'false'){
+//     string = false;
+//   }
+//   return string;
+// }
 
 function sortResults(){
   neighborhoodArray.sort(function (a, b) {
@@ -125,21 +138,32 @@ function sortResults(){
   });
 }
 
-function processUserAnswers(event){
-  event.preventDefault();
-  console.log(event.target);
-
-  for (var i = 0; i < questionArray.length; i++) {
-    var questionName = questionArray[i].name;
-    var userAnswer = event.target[questionName].value;
-    console.log(userAnswer);
-    createUserArray(questionName, userAnswer);
-  }
-  assignNeighborhoodScores();
-  sortResults();
-  removeForm();
-  appendResultList();
-}
+// function processUserAnswers(e){
+//   e.preventDefault();
+//     var userAnswer = event.target.code;
+//     console.log(userAnswer);
+//     userInputArray.push(userAnswer);
+//     console.log(userInputArray);
+//     neighborhoodArray.forEach(function() {
+//       for (var i = 0; i < userInputArray.length; i++) {
+//         if (this.characteristics.indexOf(userInputArray[i]) > -1) {
+//           this.score++
+//           console.log(this.score);
+//         }
+//       }
+//     }, this);
+//
+//   // console.log(event.target);
+//   //
+//   // for (var i = 0; i < questionArray.length; i++) {
+//   //   var questionName = questionArray[i].name;
+//   //   createUserArray(questionName, userAnswer);
+//   // }
+//   // assignNeighborhoodScores();
+//   sortResults();
+//   removeForm();
+//   appendResultList();
+// }
 //CREATE RANKED LIST AFTER FORM RESULTS
 function appendResultList() {
   var formResults = $('#form-results');
@@ -159,4 +183,19 @@ function appendResultList() {
 }
 
 //EVENT LISTENER FOR FORM PAGE
-$('#help-me-choose-form').on('submit', processUserAnswers);
+$('#help-me-choose-form').on('submit', function(e) {
+  e.preventDefault();
+    userInputArray.push($(".thisQuestionCounts").val());
+    console.log(userInputArray);
+    neighborhoodArray.forEach(function() {
+      for (var i = 0; i < userInputArray.length; i++) {
+        if (this.characteristics.indexOf(userInputArray[i]) > -1) {
+          this.score++
+          console.log(this.score);
+        }
+      }
+    }, this);
+    sortResults();
+    removeForm();
+    appendResultList();
+});

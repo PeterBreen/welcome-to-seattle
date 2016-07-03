@@ -23,22 +23,6 @@ Hoods.pullData = function() {
   }
 }; Hoods.pullData() //For some dumb reason I can't seem to put this in an IFFE
 
-//places hoods on the place page
-// Hoods.placeHoods = function() {
-// var hoodNames = neighborhoodArray.map(function(a) {
-//     return {
-//       name: a.name,
-//       pageLink: a.pageLink
-//     };
-//   })
-//   hoodNames.forEach(function() {
-//     // var aTag = $('a');
-//     // aTag.attr('neighborhood.html?id=' + this.pageLink);
-//     // var placeName = aTag.text(this.name);
-//     $('#places-list').append('<p></p>').html("<a href='neighborhood.html?id=" + this.pageLink + "'>" + this.name + "</a>").addClass('places-list');//trying to link the hoods but couldn't get it.
-//   }, this)
-// }; Hoods.placeHoods()
-
 
 function Neighborhooder(rawData) {
   this.name = rawData.name;
@@ -52,13 +36,15 @@ function Neighborhooder(rawData) {
   neighborhoodArray.push(this);
 }
 
-function createUserArray(characteristic, value){
-  var userChar = {
-    characteristic: characteristic,
-    value: value
-  };
-  userInputArray.push(userChar);
-}
+// REMOVED: createUserArray no longer necessary
+
+// function createUserArray(characteristic, value){
+//   var userChar = {
+//     characteristic: characteristic,
+//     value: value
+//   };
+//   userInputArray.push(userChar);
+// }
 
 //QUERYSTRING STUFF
 //based on css-tricks.com/snippets/javascript/get-url-variables/
