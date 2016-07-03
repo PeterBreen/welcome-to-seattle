@@ -6,6 +6,16 @@
   <link href='https://fonts.googleapis.com/css?family=Fira+Sans' rel='stylesheet' type='text/css'>
   <link href="css/style.css" rel="stylesheet" type="text/css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script id="question-template" type="text/x-handlebars-template">
+    <label class="questionCss">{{question}}</label>
+    <p class="answerCSS">YES</p>
+    <input type="radio" value="true" name="{{name}}" class="answerCSS">
+    <p class="answerCSS">NO</p>
+    <input type="radio" value="false" name="{{name}}" class="answerCSS">
+    <br>
+  </script>
 </head>
 <body class="subpage">
   <header>
