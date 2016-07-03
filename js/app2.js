@@ -1,131 +1,99 @@
 var userInputArray = [];
-var questionArray = [];
+var ques = [];
 
-function Question () {
-  this.question = '';
-  this.name = '';
+function Question(questionObj) {
+  this.question = questionObj.question;
+  this.name = questionObj.name;
 }
 
-var nightLifeQuestion = new Question ();
-nightLifeQuestion.question = 'Is it important for you to have good nightlife in your neighborhood?';
-nightLifeQuestion.name = 'nightLifeQuestion';
-questionArray.push(nightLifeQuestion);
+var questionObj = [{
+  question: 'Is it important for you to have good nightlife in your neighborhood?',
+  name: 'nightLifeQuestion'
+}, {
+  question: 'Do you need public transit?',
+  name: 'transitQuestion'
+}, {
+  question: 'Do you need to be close to a park?',
+  name: 'parksQuestion'
+}, {
+  question: 'Is it important to have single family housing in your neighborhood?',
+  name: 'singleFamilyHousingQuestion'
+}, {
+  question: 'Do you want to be in a neighborhood with mostly apartments?',
+  name: 'rentableAptQuestion'
+}, {
+  question: 'Do you need to be able to walk to a main shopping district?',
+  name: 'walkabilityQuestion'
+}, {
+  question: 'Do you want to live in a more crowded urban environment?',
+  name: 'urbanQuestion'
+}, {
+  question: 'Is it important for you to have good restaurants in the neighborhood?',
+  name: 'restaurantQuestion'
+}, {
+  question: 'Do you enjoy having a lively arts scene in your neighborhood?',
+  name: 'artsQuestion'
+}, {
+  question: 'Do you like hipsters?',
+  name: 'hipsterQuestion'
+}]
 
-var transitQuestion = new Question ();
-transitQuestion.question = 'Do you need public transit?';
-transitQuestion.name = 'transitQuestion';
-questionArray.push(transitQuestion);
-
-var parksQuestion = new Question ();
-parksQuestion.question = 'Do you need to be close to a park?';
-parksQuestion.name = 'parksQuestion';
-questionArray.push(parksQuestion);
-
-var singleFamilyHousingQuestion = new Question ();
-singleFamilyHousingQuestion.question = 'Is it important to have single family housing in your neighborhood?';
-singleFamilyHousingQuestion.name = 'singleFamilyHousingQuestion';
-questionArray.push(singleFamilyHousingQuestion);
-
-var rentableAptQuestion = new Question ();
-rentableAptQuestion.question = 'Do you want to be in a neighborhood with mostly apartments?';
-rentableAptQuestion.name = 'rentableAptQuestion';
-questionArray.push(rentableAptQuestion);
-
-var walkabilityQuestion = new Question ();
-walkabilityQuestion.question = 'Do you need to be able to walk to a main shopping district?';
-walkabilityQuestion.name = 'walkabilityQuestion';
-questionArray.push(walkabilityQuestion);
-
-var urbanQuestion = new Question ();
-urbanQuestion.question = 'Do you want to live in a more crowded urban environment?';
-urbanQuestion.name = 'urbanQuestion';
-questionArray.push(urbanQuestion);
-
-var restaurantQuestion = new Question ();
-restaurantQuestion.question = 'Is it important for you to have good restaurants in the neighborhood?';
-restaurantQuestion.name = 'restaurantQuestion';
-questionArray.push(restaurantQuestion);
-
-var artsQuestion = new Question ();
-artsQuestion.question = 'Do you enjoy having a lively arts scene in your neighborhood?';
-artsQuestion.name = 'artsQuestion';
-questionArray.push(artsQuestion);
-
-var hipsterQuestion = new Question ();
-hipsterQuestion.question = 'Do you like hipsters?';
-hipsterQuestion.name = 'hipsterQuestion';
-questionArray.push(hipsterQuestion);
-
-for (var i = 0; i < questionArray.length; i++){
-  var aquestion = document.createElement('label');
-  aquestion.setAttribute('class', 'questionCSS');
-  var space = document.createElement('br');
-  var input1 = document.createElement('input');
-  var yes = document.createElement('p');
-  input1.type = 'radio';
-  input1.value = 'true';
-  input1.name = questionArray[i].name;
-  input1.setAttribute('class', 'answerCSS');
-  yes.textContent = 'YES';
-  yes.setAttribute('class', 'answerCSS');
-  var input2 = document.createElement('input');
-  var no = document.createElement('p');
-  input2.type = 'radio';
-  input2.value = 'false';
-  input2.name = questionArray[i].name;
-  input2.setAttribute('class', 'answerCSS');
-  no.textContent = 'NO';
-  no.setAttribute('class', 'answerCSS');
-  aquestion.textContent = questionArray[i].question;
-  document.getElementById('question-space').appendChild(aquestion);
-  document.getElementById('question-space').appendChild(yes);
-  document.getElementById('question-space').appendChild(input1);
-  document.getElementById('question-space').appendChild(no);
-  document.getElementById('question-space').appendChild(input2);
-  document.getElementById('question-space').appendChild(space);
+questionObj.toHtml = function(ques) {
+  var source = $('#question-template').html();
+  var template = Handlebars.compile(source);
+  var store = template(ques);
+  return store;
 }
 
-function scoreAssignment(neighborhood){
-  for (var i = 0; i < userInputArray.length; i++){
-    if (destringify(userInputArray[i].value) === neighborhood.characteristics[i].value){
+questionObj.forEach(function(el) {
+  ques.push(new Question(el));
+})
+
+ques.forEach(function(el) {
+  $('#question-space').append(questionObj.toHtml(el));
+})
+
+function scoreAssignment(neighborhood) {
+  for (var i = 0; i < userInputArray.length; i++) {
+    if (destringify(userInputArray[i].value) === neighborhood.characteristics[i].value) {
       neighborhood.score++;
     }
   }
 }
 
-function removeForm(){
+function removeForm() {
   document.getElementById('form-selection').style.display = 'none';
 }
 
-function assignNeighborhoodScores(){
-  for(var i = 0; i < neighborhoodArray.length; i++){
+function assignNeighborhoodScores() {
+  for (var i = 0; i < neighborhoodArray.length; i++) {
     scoreAssignment(neighborhoodArray[i]);
     console.log(neighborhoodArray[i]);
   }
 }
 
-function destringify(string){
-  if(string === 'true'){
+function destringify(string) {
+  if (string === 'true') {
     string = true;
-  }
-  else if(string === 'false'){
+  } else if (string === 'false') {
     string = false;
   }
   return string;
 }
 
-function sortResults(){
-  neighborhoodArray.sort(function (a, b) {
-    if (a.score > b.score){
+function sortResults() {
+  neighborhoodArray.sort(function(a, b) {
+    if (a.score > b.score) {
       return -1;
     }
-    if (b.score > a.score){
+    if (b.score > a.score) {
       return 1;
-    } return 0;
+    }
+    return 0;
   });
 }
 
-function processUserAnswers(event){
+function processUserAnswers(event) {
   event.preventDefault();
   console.log(event.target);
 
@@ -161,3 +129,5 @@ function appendResultList() {
 //EVENT LISTENER FOR FORM PAGE
 var getUserAnswers = document.getElementById('help-me-choose-form');
 getUserAnswers.addEventListener('submit', processUserAnswers);
+
+questionObj.toHtml(questionObj);
