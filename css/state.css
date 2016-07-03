@@ -1,0 +1,16 @@
+nav ul li:hover > ul {
+		display: block;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    padding-left: 10px;
+    z-index: 1;
+    background-color: black;
+	}
+.get-started:hover {
+  text-decoration: underline;
+}
+.places-link:hover {
+  text-decoration: underline;
+}

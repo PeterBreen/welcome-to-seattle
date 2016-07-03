@@ -1,0 +1,149 @@
+
+nav ul {
+padding: 0;
+margin-left: 1.5rem;
+align: right;
+}
+nav li {
+  font-size: 1.2rem;
+  list-style-type: none;
+  display: inline;
+  padding-right: 1rem;
+}
+nav ul ul {
+	display: none;
+}
+
+legend {
+  font-size: 1.7rem;
+}
+fieldset {
+  border: none;
+}
+
+
+.subpage {
+  width: 100%;
+  min-height: 43.75rem;
+  height: 100%;
+  background-image: url(../images/header_img2.jpg);
+  max-width: 1980px;
+  background-attachment: fixed;
+  display: relative;
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.hpsection{
+  margin-bottom: 120px;
+}
+.main {
+  max-width:60rem;
+  margin: 0 auto;
+  background-color: black;
+  opacity: 0.8;
+  color: white;
+  padding: 1rem;
+}
+
+.homepage {
+background-image: url(../images/header_img1.jpg);
+height: 100%
+max-width: 1980px;
+background-attachment: fixed;
+/*display: relative;*/
+background-position: center;
+background-size: cover;
+margin: 0 auto;
+}
+.positioning-header {
+  padding-top: 5rem;
+}
+.welcome-text {
+  width: 24rem;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  opacity: 0.75;
+}
+
+.get-started {
+  padding: 0.5rem 0.7rem;
+  background-color: rgba(255, 255, 255, 1);
+  color: #000;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.places-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.question {
+  margin-left: 30px;
+  padding-bottom: 15px;
+  font-size: 1.1rem;
+  max-width: 60rem;
+}
+
+.answer {
+  margin-left: 30px;
+}
+
+.submit {
+margin-left: 60px;
+}
+
+.wrapper {
+	min-height: 100%;
+	height: 100%;
+	margin-bottom: -1.1875rem; /* the bottom margin is the negative value of the footer's height */
+}
+
+.bio{
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+}
+
+.bioInfoBox{
+  margin-top: 30px;
+}
+
+.areWeThereYet {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.places-list {
+  color: rgb(155,161,162);
+  font-size: 2em;
+  color: #fff
+}
+
+.comments {
+  margin-left: 2rem;
+}
+
+.neighborhood-form {
+margin-top: 2rem;
+}
+
+.questionCSS{
+  display: block;
+}
+.answerCSS {
+  display: inline-block;
+  margin: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .welcome-text {
+    width: 30rem;
+    padding: 2rem 5rem;
+  }
+}
