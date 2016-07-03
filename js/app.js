@@ -2,51 +2,54 @@ var neighborhoodArray = [];
 var currentNeighborhood;
 var commentsArray = [];
 var Hoods = {}
-Hoods.all = []
+// Hoods.all = []
 
 Hoods.pullData = function() {
   if (localStorage.rawData) {
     console.log("LocalStorage present");
     var localHoodData = JSON.parse(localStorage.rawData);
     localHoodData.forEach(function(hoodData) {
-      Hoods.all.push(hoodData)
-    }, this)
+      new Neighborhooder(hoodData);
+    }, this);
   } else {
     $.getJSON("data/hoods.json", function(data) {
-      Hoods.Neighborhood(data);
+      // Hoods.Neighborhood(data);
       var stringData = JSON.stringify(data);
       localStorage.setItem("rawData", stringData);
       data.forEach(function(hoodData) {
-        Hoods.all.push(hoodData)
-      }, this)
+        new Neighborhooder(hoodData);
+      }, this);
     })
   }
 }; Hoods.pullData() //For some dumb reason I can't seem to put this in an IFFE
 
 //places hoods on the place page
-Hoods.placeHoods = function() {
-var hoodNames = Hoods.all.map(function(a) {
-    return a.name
-  })
-  hoodNames.forEach(function(name) {
-    $('#places-list').append(name + '<br>').addClass('places-list') //trying to link the hoods but couldn't get it.
-    // var aTag = document.createElement('a');
-    // aTag.setAttribute('href', 'neighborhood.html?id=' + neighborhoodArray[i].pageLink)
-  })
-}; Hoods.placeHoods()
+// Hoods.placeHoods = function() {
+// var hoodNames = neighborhoodArray.map(function(a) {
+//     return {
+//       name: a.name,
+//       pageLink: a.pageLink
+//     };
+//   })
+//   hoodNames.forEach(function() {
+//     // var aTag = $('a');
+//     // aTag.attr('neighborhood.html?id=' + this.pageLink);
+//     // var placeName = aTag.text(this.name);
+//     $('#places-list').append('<p></p>').html("<a href='neighborhood.html?id=" + this.pageLink + "'>" + this.name + "</a>").addClass('places-list');//trying to link the hoods but couldn't get it.
+//   }, this)
+// }; Hoods.placeHoods()
 
 
-
-
-Hoods.Neighborhood = function(rawData) {
+function Neighborhooder(rawData) {
   this.name = rawData.name;
   this.characteristics = rawData.characteristics;
   this.map = rawData.map;
   this.blurb = rawData.blurb;
   this.pageLink = rawData.pageLink;
   this.factsList = rawData.factsList;
-  this.photo = "images/" + rawData.pageLink + ".jpg";
+  this.pic = "images/" + rawData.pageLink + ".jpg";
   this.score = 0;
+  neighborhoodArray.push(this);
 }
 
 function createUserArray(characteristic, value){
@@ -104,8 +107,7 @@ function displayNeighborhood(neighborhood){
 
   currentNeighborhood = neighborhood.pageLink;
 
-  var neighborhoodPhoto = document.createElement('img');
-  neighborhoodPhoto.setAttribute('src', neighborhood.photo);
+  var neighborhoodPhoto = "<img src='" + neighborhood.pic + "'>";
   $('#info-box').append(neighborhoodPhoto);
 
   var factsContent = document.createElement('ul');
