@@ -345,6 +345,12 @@ if (neighborhoodCheck) {
   getQueryVariable('id');
 }
 
+
+//create toHtml function to compile Handlebars template in neighborhood.HTML
+Neighborhood.prototype.neighborhoodArray = function() {
+  var htmlTemp = Handlebars.compile($('#handlesbarsTemplate').html);
+  $('#handlebars-neighborhood').append(htmlTemp(this));
+}
 //DISPLAY PAGE CONTENT FOR NEIGHBORHOOD.HTML
 function displayNeighborhood(neighborhood){
 

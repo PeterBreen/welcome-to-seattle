@@ -2,11 +2,27 @@
 <html>
 <head>
   <title>Welcome to Seattle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Fira+Sans' rel='stylesheet' type='text/css'>
   <link href="css/style.css" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  //Adding Handlebars template for displayNeighborhood function in app.js
+  <script id="handlebarsTemplate" type="text/x-handlebars-template">
+    <article>
+      <header>
+          <h1>{{title}}</h1>
+          <a href="{{url}}" target="_blank"><iframe style="width:300px; height:200px;" src="{{iframe}}"></iframe></a>
+          <section>{{info-box}}</section>
+          <img src={{imgURL}}>
+          <ul>{{factsContent}}</ul>
+          <li>{{facts}}</li>
+          <p>{{userComment}}</p>
+          <p>{{inputName}}</p>
+        </header>
+      </article>
+    </script>
+
 </head>
 <body class="subpage neighborhood-page">
   <header>
@@ -43,9 +59,11 @@
   <div class="main neighborhood-page">
     <div class="wrapper">
 
+    <section id="handlebars-neighborhood">
     <section class="neighborhood-name" id="neighborhood-name"></section>
     <section class="info-box" id="info-box"></section>
     <div class="google-map" id="google-map"></div>
+    </section>
 
     <section class="neighborhood-form">
       <form id="neighborhood-comment-form">
@@ -68,6 +86,8 @@
   </div>
 
   <footer>Copyright &copy; 2016 <a href="about.html">AreWeThereYet?</a></footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
