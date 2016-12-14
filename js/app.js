@@ -52,11 +52,11 @@ function getQueryVariable(variable)
     var pair = vars[i].split('=');
     key = pair[0];
     value = pair[1];
-    console.log('key: ' + key);
+
     if( key === 'id' ){
       for (var i = 0; i < neighborhoodArray.length; i++){
         if (neighborhoodArray[i].pageLink === pair[1]){
-          displayNeighborhood(neighborhoodArray[i]);
+          Neighborhood.renderAll(neighborhoodArray[i]);
           return;
         }
       }
@@ -69,49 +69,38 @@ if (neighborhoodCheck) {
   getQueryVariable('id');
 }
 
-//DISPLAY PAGE CONTENT FOR NEIGHBORHOOD.HTML
-function displayNeighborhood(neighborhood){
 
+//create toHtml function to compile Handlebars template in neighborhood.HTML -MM
+Neighborhood.prototype.toHtml = function() {
+  var htmlTemp = Handlebars.compile($('#handlesbarsTemplate').html());
+  $('#handlebars-neighborhood').append(htmlTemp(this));
+}
+
+//create renderAll function to append neighborhoodArray to template -MM
+Neighborhood.renderAll = function(inputData) {
+    Neighborhood.neighborhoodArray.forEach(function(neighborhoodArray) {
+      $('#handlebars-neighborhood').append(neighborhoodArray.toHtml());
+    })
+  }
   fetchCommentsFromLocal();
 
-  var title = document.createElement('h1');
-  title.textContent = neighborhood.name;
-  document.getElementById('neighborhood-name').appendChild(title);
 
-  var mapImage = document.createElement('iframe');
-  mapImage.src = neighborhood.map;
-  document.getElementById('google-map').appendChild(mapImage);
-
-  var blurbContent = document.createElement('section');
-  blurbContent.textContent = neighborhood.blurb;
-  document.getElementById('info-box').appendChild(blurbContent);
-
-  currentNeighborhood = neighborhood.pageLink;
-
-  var neighborhoodPhoto = document.createElement('img');
-  neighborhoodPhoto.setAttribute('src', neighborhood.photo);
-  document.getElementById('info-box').appendChild(neighborhoodPhoto);
-
-  var factsContent = document.createElement('ul');
-  document.getElementById('info-box').appendChild(factsContent);
-
-  for (var i = 0; i < commentsArray.length; i++) {
-    var userComment = document.createElement('p');
-    var inputName = document.createElement('p');
-    if (commentsArray[i].neighborhood === currentNeighborhood) {
-      userComment.textContent = commentsArray[i].comment;
-      inputName.textContent = commentsArray[i].username;
-      document.getElementById('comments').appendChild(inputName);
-      document.getElementById('comments').appendChild(userComment);
+Neighborhood.fetchAll = function() {
+    if (localStorage.neighborhoodData) {
+      var neighborhoodData = JSON.parse(localStorage.getItem('neighborhoodData'));
+      Neighborhood.loadAll(neighborhoodData);
+      Neighborhood.renderAll(neighborhoodData);
+    } else {
+      $.getJSON('data/neighborhoodData.json', function(data) {
+        localStorage.setItem('neighborhoodData', JSON.stringify(data));
+        var neighborhoodData = JSON.parse(localStorage.getItem('neighborhoodData'));
+        Portfolio.loadAll(neighborhoodData);
+        Portfolio.renderAll(neighborhoodData);
+      });
     }
-  }
+  };
 
-  for (var i = 0; i < neighborhood.factsList.length; i++){
-    var facts = document.createElement('li');
-    facts.textContent = neighborhood.factsList[i];
-    factsContent.appendChild(facts);
-  }
-}
+  Neighborhood.fetchAll();
 
 function displayPlaces() {
   var places = document.getElementById('places-list');
@@ -145,11 +134,11 @@ function processComment(event){
   var userComment = document.createElement('p');
   userComment.setAttribute('class', currentNeighborhood);
   userComment.textContent = 'Comment: ' + event.target.comment.value;
-  console.log(userComment);
+
   var inputName = document.createElement('p');
   inputName.setAttribute('class', currentNeighborhood);
   inputName.textContent = 'Name: ' + event.target.nameofuser.value;
-  console.log(inputName);
+
   document.getElementById('comments').appendChild(inputName);
   document.getElementById('comments').appendChild(userComment);
   var commentObject = {
@@ -169,7 +158,7 @@ function saveCommentsToLocal(){
 function fetchCommentsFromLocal(){
   var savedComments = JSON.parse(localStorage.getItem('savedComments'));
   if (savedComments){
-    console.log('User has comments from last time.');
+
     commentsArray = savedComments; }
 }
 
