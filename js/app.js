@@ -332,7 +332,7 @@ function getQueryVariable(variable)
     if( key === 'id' ){
       for (var i = 0; i < neighborhoodArray.length; i++){
         if (neighborhoodArray[i].pageLink === pair[1]){
-          renderAll(neighborhoodArray[i]);
+          Neighborhood.renderAll(neighborhoodArray[i]);
           return;
         }
       }
@@ -357,8 +357,26 @@ Neighborhood.renderAll = function(inputData) {
     Neighborhood.neighborhoodArray.forEach(function(neighborhoodArray) {
       $('#handlebars-neighborhood').append(neighborhoodArray.toHtml());
     })
-    fetchCommentsFromLocal();
   }
+  fetchCommentsFromLocal();
+
+
+Neighborhood.fetchAll = function() {
+    if (localStorage.neighborhoodData) {
+      var neighborhoodData = JSON.parse(localStorage.getItem('neighborhoodData'));
+      Neighborhood.loadAll(neighborhoodData);
+      Neighborhood.renderAll(neighborhoodData);
+    } else {
+      $.getJSON('data/neighborhoodData.json', function(data) {
+        localStorage.setItem('neighborhoodData', JSON.stringify(data));
+        var neighborhoodData = JSON.parse(localStorage.getItem('neighborhoodData'));
+        Portfolio.loadAll(neighborhoodData);
+        Portfolio.renderAll(neighborhoodData);
+      });
+    }
+  };
+
+  Neighborhood.fetchAll();
 
 function displayPlaces() {
   var places = document.getElementById('places-list');
