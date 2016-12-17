@@ -100,7 +100,7 @@ function removeForm(){
 function assignNeighborhoodScores(){
   for(var i = 0; i < neighborhoodArray.length; i++){
     scoreAssignment(neighborhoodArray[i]);
-    console.log(neighborhoodArray[i]);
+
   }
 }
 
@@ -127,12 +127,12 @@ function sortResults(){
 
 function processUserAnswers(event){
   event.preventDefault();
-  console.log(event.target);
+
 
   for (var i = 0; i < questionArray.length; i++) {
     var questionName = questionArray[i].name;
     var userAnswer = event.target[questionName].value;
-    console.log(userAnswer);
+    
     createUserArray(questionName, userAnswer);
   }
   assignNeighborhoodScores();
